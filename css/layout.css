@@ -1,0 +1,94 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(247, 244, 240, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(45, 45, 45, 0.08);
+}
+
+.header-content {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  width: 220px;
+}
+
+.brand img {
+  width: 100%;
+  height: auto;
+  display: block;
+}   
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 0.9rem;
+}
+
+.hero {
+  min-height: calc(100vh - 82px);
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 22px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-gold);
+}
+
+.hero-content p {
+  max-width: 680px;
+  margin-top: 28px;
+  font-size: 1.08rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.hero-card {
+  min-height: 520px;
+  border-radius: var(--radius);
+  background:
+    linear-gradient(rgba(45, 45, 45, 0.35), rgba(45, 45, 45, 0.55)),
+    linear-gradient(135deg, var(--color-taupe), var(--color-charcoal));
+  display: flex;
+  align-items: flex-end;
+  padding: 42px;
+  color: var(--color-offwhite);
+}
+
+.hero-card p {
+  color: var(--color-offwhite);
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.05;
+}

@@ -1,0 +1,29 @@
+body {
+  font-family: var(--font-body);
+  background: var(--color-offwhite);
+  color: var(--color-charcoal);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(100% - 32px, var(--container));
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 5.2rem);
+  letter-spacing: -0.04em;
+}
+
+p {
+  font-size: 1rem;
+  color: rgba(45, 45, 45, 0.78);
+}

@@ -1,0 +1,114 @@
+@media (max-width: 900px) {
+  .desktop-nav,
+  .site-header .btn {
+    display: none;
+  }
+
+  .header-content {
+    min-height: 72px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 56px 0 96px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-card {
+    min-height: 320px;
+    padding: 28px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - 24px, var(--container));
+  }
+
+  .brand {
+    width: 140px;
+  }
+
+  .whatsapp-float {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-grid {
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.cards-grid {
+  grid-template-columns: 1fr;
+}
+
+.steps-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.final-cta-box {
+  padding: 48px 24px;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .structure-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .structure-visual,
+  .image-placeholder {
+    min-height: 360px;
+  }
+}

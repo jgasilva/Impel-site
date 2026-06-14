@@ -1,0 +1,15 @@
+:root {
+  --color-charcoal: #2d2d2d;
+  --color-taupe: #af9f8f;
+  --color-gold: #d6ab78;
+  --color-sage: #c4c7ac;
+  --color-offwhite: #f7f4f0;
+  --color-white: #ffffff;
+
+  --font-title: Georgia, "Times New Roman", serif;
+  --font-body: "Montserrat", Arial, sans-serif;
+
+  --container: 1180px;
+  --radius: 24px;
+  --transition: 0.25s ease;
+}
