@@ -130,3 +130,21 @@
   justify-content: space-between;
   gap: 24px;
 }
+
+.mobile-menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(45, 45, 45, 0.16);
+  border-radius: 999px;
+  background: var(--color-offwhite);
+  color: var(--color-charcoal);
+  font-size: 1.35rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-nav {
+  display: none;
+}
