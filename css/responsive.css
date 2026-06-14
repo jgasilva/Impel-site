@@ -112,3 +112,21 @@
     min-height: 360px;
   }
 }
+
+@media (max-width: 900px) {
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-card-wide {
+    grid-column: span 1;
+  }
+}
