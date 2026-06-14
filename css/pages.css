@@ -306,3 +306,93 @@
 .process-card-wide {
   grid-column: span 3;
 }
+
+.project-filter {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(45, 45, 45, 0.16);
+  color: var(--color-charcoal);
+  background: transparent;
+  font-size: 0.92rem;
+}
+
+.filter-pill.active,
+.filter-pill:hover {
+  background: var(--color-charcoal);
+  color: var(--color-offwhite);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.portfolio-card {
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(45, 45, 45, 0.08);
+}
+
+.portfolio-image {
+  min-height: 280px;
+  background:
+    linear-gradient(rgba(45, 45, 45, 0.18), rgba(45, 45, 45, 0.46)),
+    linear-gradient(135deg, var(--color-taupe), var(--color-charcoal));
+}
+
+.portfolio-content {
+  padding: 28px;
+}
+
+.portfolio-content span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--color-gold);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.portfolio-content h3 {
+  margin-bottom: 12px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.info-card {
+  background: white;
+  padding: 36px;
+  border-radius: var(--radius);
+}
+
+.info-card h3 {
+  margin-bottom: 16px;
+}
+
+.section-dark {
+  background: var(--color-charcoal);
+  color: var(--color-offwhite);
+}
+
+.section-dark h2,
+.section-dark p {
+  color: var(--color-offwhite);
+}
