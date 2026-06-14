@@ -156,3 +156,114 @@
     width: 100%;
   }
 }
+
+/* =========================
+   Correções mobile globais
+   ========================= */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-content {
+    min-height: 72px;
+    gap: 16px;
+  }
+
+  .brand {
+    width: 150px;
+    flex-shrink: 0;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .site-header .btn {
+    display: inline-flex;
+    min-height: 42px;
+    padding: 0 14px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  .steps-grid,
+  .process-grid,
+  .portfolio-grid,
+  .projects-grid,
+  .cards-grid,
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+    width: 100%;
+  }
+
+  .step-card,
+  .process-card,
+  .portfolio-card,
+  .project-card,
+  .info-card,
+  .stat-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .whatsapp-float {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    width: auto;
+    max-width: calc(100vw - 32px);
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand {
+    width: 132px;
+  }
+
+  .site-header .btn {
+    font-size: 0.76rem;
+    padding: 0 10px;
+  }
+
+  .container {
+    width: min(100% - 24px, var(--container));
+  }
+
+  .section,
+  .stats-section {
+    padding: 72px 0;
+  }
+
+  .page-hero {
+    padding: 84px 0 64px;
+  }
+
+  .final-cta-box,
+  .contact-card,
+  .info-card,
+  .stat-card,
+  .process-card,
+  .step-card {
+    padding: 28px 22px;
+  }
+}
