@@ -218,3 +218,24 @@
   justify-content: space-between;
   gap: 24px;
 }
+
+.btn-primary {
+  transition: 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: #d6ab78;
+  color: #2d2d2d;
+}
+
+.site-footer a,
+.site-footer button,
+.desktop-nav a {
+  transition: 0.2s ease;
+}
+
+.site-footer a:hover,
+.site-footer button:hover,
+.desktop-nav a:hover {
+  color: #c8a57a;
+}

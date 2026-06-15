@@ -271,7 +271,7 @@
   z-index: 1;
   color: var(--color-offwhite);
   font-family: var(--font-title);
-  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  font-size: clamp(2.2rem, 4vw, 3.9rem);
   line-height: 0.95;
   letter-spacing: -0.04em;
   text-transform: uppercase;
@@ -281,7 +281,7 @@
 .image-placeholder span::after {
   content: "Estrutura produtiva própria para controle da execução.";
   display: block;
-  margin-top: 18px;
+  margin-top: 24px;
   font-family: var(--font-body);
   font-size: 0.92rem;
   line-height: 1.5;
@@ -335,7 +335,7 @@
 }
 
 .page-hero {
-  padding: 120px 0 100px;
+  padding: 72px 0 84px;
   background: var(--color-offwhite);
 }
 
