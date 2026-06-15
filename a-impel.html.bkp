@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>A IMPEL | Estrutura, Processo e Confiança</title>
+  <meta name="description" content="Conheça a IMPEL e descubra por que estrutura, processo e capacidade de execução fazem diferença em um projeto de móveis planejados." />
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-content">
+        <span class="eyebrow">A IMPEL</span>
+        <h1>Uma estrutura criada para executar projetos com mais segurança, precisão e controle.</h1>
+        <p>
+          Quando alguém investe em móveis planejados, não está escolhendo apenas acabamentos,
+          cores ou ambientes. Está escolhendo quem será responsável por executar uma parte
+          importante do seu imóvel ou negócio.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container section-grid">
+        <div>
+          <span class="eyebrow">Nossa visão</span>
+          <h2>A qualidade não nasce por acaso.</h2>
+        </div>
+
+        <div class="section-text">
+          <p>
+            Acreditamos que um bom resultado é consequência direta de uma operação bem estruturada.
+          </p>
+          <p>
+            Por trás de cada ambiente entregue existe planejamento, tecnologia, produção própria,
+            controle e uma equipe comprometida com a execução correta do projeto.
+          </p>
+          <p>
+            É essa combinação que permite transformar boas ideias em ambientes funcionais,
+            elegantes e bem executados.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Diferenciais</span>
+          <h2>Mais do que móveis planejados. Capacidade de execução.</h2>
+          <p>
+            A confiança nasce daquilo que existe por trás da entrega: estrutura, processo,
+            acompanhamento e responsabilidade.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="info-card">
+            <h3>Estrutura própria</h3>
+            <p>Mais controle sobre a produção.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Processo organizado</h3>
+            <p>Mais previsibilidade para o projeto.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Atendimento consultivo</h3>
+            <p>Mais clareza durante toda a jornada.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Compromisso com a execução</h3>
+            <p>Mais segurança para quem investe.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container section-grid">
+        <div>
+          <span class="eyebrow">Como trabalhamos</span>
+          <h2>Uma empresa construída para entregar com responsabilidade.</h2>
+        </div>
+
+        <div class="section-text">
+          <p>
+            Cada projeto segue um fluxo organizado que envolve atendimento, levantamento de informações,
+            desenvolvimento técnico, produção, montagem e entrega.
+          </p>
+          <p>
+            Essa organização reduz improvisos, melhora a comunicação e ajuda a preservar o padrão
+            de qualidade esperado.
+          </p>
+
+          <a href="como-funciona.html" class="btn btn-light">Entenda Como Funciona</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section structure-preview">
+      <div class="container structure-grid">
+        <div class="structure-visual">
+          <div class="image-placeholder">
+            <span>Equipe Especializada</span>
+          </div>
+        </div>
+
+        <div class="structure-content">
+          <span class="eyebrow">Transparência</span>
+          <h2>Acreditamos que confiança se constrói com transparência.</h2>
+          <p>
+            Clientes e parceiros podem conhecer nossa estrutura mediante agendamento.
+          </p>
+          <p>
+            Quando mostramos nossa operação, mostramos também nosso compromisso com a qualidade,
+            a organização e a responsabilidade na execução dos projetos.
+          </p>
+
+          <button class="btn btn-primary" data-whatsapp>Agendar Visita</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="container final-cta-box">
+        <span class="eyebrow">Solicite um orçamento</span>
+        <h2>Vamos conversar sobre o seu projeto?</h2>
+        <p>
+          Se você busca móveis planejados de alto padrão e valoriza uma empresa estruturada
+          para executar com segurança, teremos satisfação em apresentar nossas soluções.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-whatsapp>Solicitar Orçamento</button>
+          <button class="btn btn-secondary" data-whatsapp>Falar com um Especialista</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <button class="whatsapp-float" data-whatsapp>WhatsApp</button>
+
+  <script src="js/includes.js"></script>
+  <script src="data/settings.js"></script>
+  <script src="data/company.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -13,7 +13,7 @@
 
 .btn-primary {
   background: var(--color-charcoal);
-  color: var(--color-offwhite);
+  color: var(--color-white);
 }
 
 .btn-primary:hover {
@@ -64,10 +64,101 @@
   color: var(--color-charcoal);
 }
 
+.mobile-menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(45, 45, 45, 0.16);
+  border-radius: 999px;
+  background: var(--color-offwhite);
+  color: var(--color-charcoal);
+  font-size: 1.35rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.desktop-nav a {
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  color: var(--color-charcoal);
+}
+
+.info-card,
+.stat-card,
+.step-card,
+.process-card,
+.project-card,
+.portfolio-card,
+.contact-card {
+  border: 1px solid #e3ddd6;
+  border-radius: 16px;
+  transition: 300ms ease;
+}
+
+.info-card:hover,
+.stat-card:hover,
+.step-card:hover,
+.process-card:hover,
+.project-card:hover,
+.portfolio-card:hover,
+.contact-card:hover {
+  background: #f0ece7;
+  transform: translateY(-2px);
+}
+
+.section-muted {
+  background: var(--color-muted);
+}
+
+.section-divider {
+  width: 120px;
+  height: 1px;
+  background: var(--color-line);
+  margin: 0 auto 64px;
+}
+
+.final-cta {
+  padding-top: 64px;
+}
+
+.section-dark .info-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(214, 171, 120, 0.18);
+}
+
+.section-dark .info-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.section-dark .info-card h3 {
+  color: var(--color-gold);
+}
+
+.section-dark .info-card p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .site-footer {
   background: var(--color-charcoal);
   color: var(--color-offwhite);
   padding: 80px 0 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-footer::before {
+  content: "Produção Própria · João Pessoa/PB";
+  display: block;
+  color: var(--color-gold);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin: 0 auto 32px;
+  width: min(100% - 32px, var(--container));
 }
 
 .footer-grid {
@@ -79,9 +170,6 @@
 .footer-brand {
   display: inline-flex;
   width: 220px;
-  padding: 16px 20px;
-  border-radius: 18px;
-  background: var(--color-offwhite);
   margin-bottom: 24px;
 }
 
@@ -129,22 +217,4 @@
   display: flex;
   justify-content: space-between;
   gap: 24px;
-}
-
-.mobile-menu-toggle {
-  display: none;
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgba(45, 45, 45, 0.16);
-  border-radius: 999px;
-  background: var(--color-offwhite);
-  color: var(--color-charcoal);
-  font-size: 1.35rem;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-}
-
-.mobile-nav {
-  display: none;
 }

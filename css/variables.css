@@ -4,12 +4,14 @@
   --color-gold: #d6ab78;
   --color-sage: #c4c7ac;
   --color-offwhite: #f7f4f0;
+  --color-muted: #f0ece7;
+  --color-line: #e3ddd6;
   --color-white: #ffffff;
 
   --font-title: Georgia, "Times New Roman", serif;
   --font-body: "Montserrat", Arial, sans-serif;
 
   --container: 1180px;
-  --radius: 24px;
-  --transition: 0.25s ease;
+  --radius: 16px;
+  --transition: 300ms ease;
 }

@@ -2,13 +2,13 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(247, 244, 240, 0.92);
+  background: rgba(247, 244, 240, 0.94);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(45, 45, 45, 0.08);
 }
 
 .header-content {
-  min-height: 82px;
+  min-height: 88px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,24 +18,27 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  width: 220px;
+  width: 245px;
+  flex-shrink: 0;
 }
 
 .brand img {
   width: 100%;
   height: auto;
   display: block;
-}   
+}
 
 .desktop-nav {
   display: flex;
   align-items: center;
   gap: 28px;
   font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  font-weight: 500;
 }
 
 .hero {
-  min-height: calc(100vh - 82px);
+  min-height: calc(100vh - 88px);
   display: flex;
   align-items: center;
   padding: 80px 0;
