@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const whatsappButtons = document.querySelectorAll("[data-whatsapp]");
+document.addEventListener("click", (event) => {
+  const whatsappButton = event.target.closest("[data-whatsapp]");
 
-  whatsappButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      openWhatsapp();
-    });
-  });
+  if (!whatsappButton) return;
+
+  event.preventDefault();
+
+  openWhatsapp();
 });

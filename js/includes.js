@@ -11,7 +11,6 @@ async function loadComponent(id, file) {
     }
 
     const html = await response.text();
-
     element.innerHTML = html;
   } catch (error) {
     console.error(error);
@@ -19,15 +18,8 @@ async function loadComponent(id, file) {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
+  await loadComponent("site-header", "components/header.html");
+  await loadComponent("site-footer", "components/footer.html");
 
-  await loadComponent(
-    "site-header",
-    "components/header.html"
-  );
-
-  await loadComponent(
-    "site-footer",
-    "components/footer.html"
-  );
-
+  document.dispatchEvent(new Event("componentsLoaded"));
 });
