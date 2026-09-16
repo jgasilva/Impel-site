@@ -291,18 +291,6 @@
   max-width: 420px;
 }
 
-.image-placeholder span::after {
-  content: "Estrutura produtiva própria para controle da execução.";
-  display: block;
-  margin-top: 24px;
-  font-family: var(--font-body);
-  font-size: 0.92rem;
-  line-height: 1.5;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(247, 244, 240, 0.72);
-  max-width: 360px;
-}
 
 .structure-content {
   display: flex;
@@ -473,4 +461,34 @@
 .contact-form .btn {
   align-self: flex-start;
   margin-top: 4px;
+}
+/* Refinamento dos cards de portfolio e imagens */
+.portfolio-card,
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover,
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(45, 45, 45, 0.08);
+}
+
+.portfolio-image,
+.project-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-image img,
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-image img,
+.project-card:hover .project-image img {
+  transform: scale(1.04);
 }
