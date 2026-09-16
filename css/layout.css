@@ -43,7 +43,7 @@
 }
 
 .desktop-nav a:hover {
-  color: #c8a57a;
+  color: var(--color-gold);
 }
 
 .hero {
@@ -71,7 +71,7 @@
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-weight: 500;
-  color: #c8a57a;
+  color: var(--color-gold);
 }
 
 .hero-content p {
@@ -90,13 +90,7 @@
 .hero-card {
   min-height: 420px;
   border-radius: var(--radius);
-  background:
-    linear-gradient(
-      135deg,
-      #8f8478 0%,
-      #6e665f 55%,
-      #4f4a45 100%
-    );
+  background: var(--color-taupe);
   display: flex;
   align-items: flex-end;
   padding: 56px;

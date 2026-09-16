@@ -1,7 +1,7 @@
 const SITE_SETTINGS = {
   companyName: "IMPEL Móveis Planejados",
-  whatsappNumber: "5583996206677",
-  whatsappDisplay: "(83) 99620-6677",
+  whatsappNumber: "5583998586796",
+  whatsappDisplay: "(83) 99858-6796",
   address: "Rua Maria Presotto Pucci, 600, Distrito Industrial, João Pessoa/PB",
   mapsUrl: "#",
   instagramUrl: "#",
