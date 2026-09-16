@@ -1,10 +1,10 @@
-// Gerenciamento de formulários do site IMPEL
-document.addEventListener("DOMContentLoaded", () => {
+function initContactForm() {
   const form = document.getElementById("contactForm");
   if (!form) return;
 
-  form.addEventListener("submit", (e) => {
+  form.onsubmit = function (e) {
     e.preventDefault();
+
     const name = document.getElementById("leadName")?.value.trim() || "";
     const phone = document.getElementById("leadPhone")?.value.trim() || "";
     const email = document.getElementById("leadEmail")?.value.trim() || "";
@@ -14,8 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (typeof openWhatsapp === "function") {
       openWhatsapp(fullMessage);
+    } else if (typeof SITE_SETTINGS !== "undefined" && SITE_SETTINGS.whatsappNumber) {
+      const encoded = encodeURIComponent(fullMessage);
+      window.open(`https://wa.me/${SITE_SETTINGS.whatsappNumber}?text=${encoded}`, "_blank");
     } else {
-      console.error("Função openWhatsapp não encontrada.");
+      alert("Erro ao conectar com o WhatsApp. Verifique as configurações.");
     }
-  });
-});
+  };
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initContactForm);
+} else {
+  initContactForm();
+}
