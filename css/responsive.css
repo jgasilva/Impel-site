@@ -128,24 +128,7 @@ body {
     margin-bottom: 40px;
   }
 
-  .whatsapp-float {
-    width: 58px;
-    height: 58px;
-    min-height: 58px;
-    max-width: 58px;
-    right: 18px;
-    left: auto;
-    bottom: 18px;
-    padding: 0;
-    border-radius: 999px;
-    font-size: 0;
-  }
-
-  .whatsapp-float::before {
-    content: "☎";
-    font-size: 1.45rem;
-    line-height: 1;
-  }
+  /* whatsapp-float padronizado globalmente em components.css */
 }
 
 @media (max-width: 480px) {
