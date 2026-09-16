@@ -1,11 +1,13 @@
 :root {
-  --color-charcoal: #2d2d2d;
-  --color-taupe: #af9f8f;
-  --color-gold: #d6ab78;
+  --color-charcoal: #262626;
+  --color-taupe: #a89886;
+  --color-gold: #c99c63;
   --color-sage: #c4c7ac;
-  --color-offwhite: #f7f4f0;
-  --color-muted: #f0ece7;
-  --color-line: #e3ddd6;
+
+  /* Bege quente uniforme da IMPEL */
+  --color-offwhite: #ece5d8;
+  --color-muted: #e3dacf;
+  --color-line: #d6ccbe;
   --color-white: #ffffff;
 
   --font-title: Georgia, "Times New Roman", serif;

@@ -99,7 +99,7 @@
 }
 
 .process-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .info-card,
@@ -109,7 +109,7 @@
 .project-card,
 .portfolio-card,
 .contact-card {
-  background: var(--color-white);
+  background: #fbf9f5;
   border: 1px solid var(--color-line);
   border-radius: var(--radius);
   transition: var(--transition);
@@ -217,7 +217,7 @@
 }
 
 .final-cta-box {
-  background: var(--color-white);
+  background: #fbf9f5;
   border-radius: var(--radius);
   padding: 80px;
   text-align: center;
