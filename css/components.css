@@ -243,5 +243,5 @@
 .site-footer a:hover,
 .site-footer button:hover,
 .desktop-nav a:hover {
-  color: #c8a57a;
+  color: var(--color-gold);
 }
