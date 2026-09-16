@@ -65,13 +65,18 @@
 }
 
 .eyebrow {
-  display: inline-block;
-  margin-bottom: 18px;
-  font-size: 0.82rem;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 5px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-weight: 500;
-  color: var(--color-gold);
+  letter-spacing: 0.14em;
+  color: #8c6633;
+  background: rgba(214, 171, 120, 0.16);
+  border: 1px solid rgba(214, 171, 120, 0.45);
+  border-radius: 999px;
 }
 
 .hero-content p {

@@ -1,13 +1,13 @@
 :root {
-  --color-charcoal: #262626;
-  --color-taupe: #a89886;
-  --color-gold: #c99c63;
-  --color-sage: #c4c7ac;
+  --color-charcoal: #2D2D2D;
+  --color-taupe: #AF9F8F;
+  --color-gold: #D6AB78;
+  --color-sage: #C4C7AC;
 
-  /* Bege quente uniforme da IMPEL */
-  --color-offwhite: #ece5d8;
-  --color-muted: #e3dacf;
-  --color-line: #d6ccbe;
+  /* Cores de fundo oficiais IMPEL */
+  --color-offwhite: #F7F4F0;
+  --color-muted: #EFEAE2;
+  --color-line: #E2DBD0;
   --color-white: #ffffff;
 
   --font-title: Georgia, "Times New Roman", serif;
