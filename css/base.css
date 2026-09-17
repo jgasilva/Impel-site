@@ -32,3 +32,167 @@ p {
   font-size: 1rem;
   color: rgba(45, 45, 45, 0.78);
 }
+
+/* ==========================================================================
+   REFINAMENTO ARQUITETURAL: HERO, CÁPSULA E CONTRASTE
+   ========================================================================== */
+
+/* Fundo Fendi obrigatório em todo o corpo */
+html, body, main {
+  background-color: #AF9F8F !important;
+  color: #1A1816;
+}
+
+/* 1. HERO COM EQUILÍBRIO VISUAL */
+.hero {
+  padding: 4rem 0 5rem 0;
+  background-color: #AF9F8F;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* O hero-card no tom Preto Nobre (#2D2D2D) como no manual da marca */
+.hero-card {
+  background-color: #2D2D2D !important;
+  color: #F7F4F0 !important;
+  padding: 3.5rem 2.5rem !important;
+  border-radius: 20px !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22) !important;
+  border: 1px solid rgba(214, 171, 120, 0.3) !important; /* Toque do dourado da paleta */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-card p {
+  font-family: var(--font-heading, serif);
+  font-size: 1.8rem;
+  line-height: 1.3;
+  color: #FFFFFF !important;
+  margin: 0;
+}
+
+.hero-card p span {
+  display: block;
+  margin-top: 1rem;
+  color: #D6AB78 !important; /* Dourado */
+}
+
+/* 2. SEGUNDA SEÇÃO: A CÁPSULA ARQUITETURAL */
+.section-muted {
+  background-color: transparent !important;
+  padding: 3rem 0 5rem 0 !important;
+}
+
+.section-muted > .container {
+  background-color: #2D2D2D !important; /* Preto Nobre isolando a ideia */
+  border-radius: 28px !important;
+  padding: 4.5rem 4rem !important;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.section-muted h2 {
+  color: #FFFFFF !important;
+  font-size: 2.2rem !important;
+  line-height: 1.25 !important;
+}
+
+.section-muted p {
+  color: #D5CFC9 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
+}
+
+.section-muted .eyebrow {
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  color: #D6AB78 !important;
+  border: 1px solid rgba(214, 171, 120, 0.4) !important;
+}
+
+.section-muted .text-link {
+  color: #D6AB78 !important;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* 3. CARDS DAS SEÇÕES SEGUINTES */
+.stat-card {
+  background-color: rgba(247, 244, 240, 0.95) !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+.stat-card h3 {
+  color: #1A1816 !important;
+}
+
+.stat-card p {
+  color: #4A443E !important;
+}
+
+/* 4. BOTÃO WHATSAPP ISOLADO (IMPEDE DE ESTOURAR A TELA) */
+[class*="whatsapp"], a[href*="wa.me"] svg {
+  max-width: 60px !important;
+  max-height: 60px !important;
+}
+
+/* 5. RODAPÉ ESCURO COM TEXTO CLARO */
+footer, .site-footer, [class*="footer"] {
+  background-color: #2D2D2D !important;
+  color: #F7F4F0 !important;
+}
+
+footer p, footer span, footer a, footer li,
+.site-footer p, .site-footer a, .site-footer span, .site-footer li {
+  color: #D5CFC9 !important;
+}
+
+footer h3, footer h4, .site-footer h3, .site-footer h4 {
+  color: #FFFFFF !important;
+}
+
+footer a:hover, .site-footer a:hover {
+  color: #D6AB78 !important;
+}
+
+/* ==========================================================================
+   CONECTOR DE SEÇÃO E CONTROLE DE VÃO
+   ========================================================================== */
+
+/* 1. Reduz o espaçamento inferior da seção escura */
+.section-muted {
+  padding-bottom: 2rem !important;
+  position: relative;
+}
+
+/* 2. Reduz o espaçamento superior da seção de diferenciais */
+.stats-section {
+  padding-top: 2rem !important;
+  position: relative;
+}
+
+/* 3. Conector técnico vertical entre a cápsula escura e os diferenciais */
+.stats-section::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(45, 45, 45, 0.4), rgba(214, 171, 120, 0.6), transparent);
+  margin: 0 auto 1.5rem auto;
+}
+
+/* Refinamento do badge Diferenciais */
+.stats-section .eyebrow {
+  background: rgba(45, 45, 45, 0.08) !important;
+  color: #2D2D2D !important;
+  border: 1px solid rgba(45, 45, 45, 0.15) !important;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+}
