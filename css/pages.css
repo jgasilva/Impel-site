@@ -668,3 +668,34 @@ button.btn-primary:hover,
     word-break: normal !important;
   }
 }
+
+/* =======================================================
+   HIERARQUIA E CONTRASTE DO HERO
+   ======================================================= */
+
+.hero-title,
+.hero h1,
+.hero .title {
+  color: #1F2421 !important; /* Grafite profundo de alto contraste */
+  font-size: clamp(2rem, 3.5vw, 2.75rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  margin-bottom: 16px !important;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle,
+.hero p,
+.hero .subtitle {
+  color: #374151 !important; /* Cinza escuro legível, sem ficar invisível */
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+  max-width: 540px;
+}
+
+.hero .eyebrow,
+.hero .badge {
+  color: #785E34 !important; /* Dourado escuro contrastante */
+  border-color: rgba(120, 94, 52, 0.3) !important;
+  font-weight: 600 !important;
+}
