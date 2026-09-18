@@ -245,8 +245,7 @@
 }
 
 .structure-preview {
-  border-top: 1px solid var(--color-line);
-  border-bottom: 1px solid var(--color-line);
+  border: none !important;
 }
 
 .structure-grid {
@@ -669,126 +668,548 @@ button.btn-primary:hover,
   }
 }
 
-/* =======================================================
-   HIERARQUIA E CONTRASTE DO HERO
-   ======================================================= */
-
-.hero-title,
-.hero h1,
-.hero .title {
-  color: #1F2421 !important; /* Grafite profundo de alto contraste */
-  font-size: clamp(2rem, 3.5vw, 2.75rem) !important;
-  font-weight: 700 !important;
-  line-height: 1.25 !important;
-  margin-bottom: 16px !important;
-  letter-spacing: -0.02em;
-}
-
-.hero-subtitle,
-.hero p,
-.hero .subtitle {
-  color: #374151 !important; /* Cinza escuro legível, sem ficar invisível */
-  font-size: 1.05rem !important;
-  line-height: 1.6 !important;
-  max-width: 540px;
-}
-
-.hero .eyebrow,
-.hero .badge {
-  color: #785E34 !important; /* Dourado escuro contrastante */
-  border-color: rgba(120, 94, 52, 0.3) !important;
-  font-weight: 600 !important;
-}
 
 /* =======================================================
-   REFINAMENTO VISUAL DO HERO & CONTRASTES
+   PADRONIZAÇÃO DEFINITIVA DE PÍLULAS E CONTRASTE
    ======================================================= */
 
-.hero-content .eyebrow {
-  display: inline-block !important;
-  font-size: 0.75rem !important;
+/* 1. Pílulas / Eyebrows: formato oval limpo e premium */
+.eyebrow,
+span.eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.76rem !important;
   font-weight: 600 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.12em !important;
-  color: #8C6D3F !important;
-  padding: 6px 14px !important;
-  border-radius: 999px !important;
-  border: 1px solid rgba(140, 109, 63, 0.25) !important;
-  background: rgba(255, 255, 255, 0.3) !important;
-  margin-bottom: 20px !important;
-  width: fit-content !important;
+  letter-spacing: 0.14em !important;
+  padding: 6px 16px !important;
+  border-radius: 9999px !important;
+  margin-bottom: 16px !important;
+  box-sizing: border-box !important;
+  line-height: 1 !important;
 }
 
-.hero-content h1.hero-title {
-  color: #242424 !important;
-  font-size: clamp(2rem, 3.2vw, 2.85rem) !important;
-  font-family: var(--font-heading, serif) !important;
-  font-weight: 600 !important;
-  line-height: 1.2 !important;
-  letter-spacing: -0.01em !important;
-  margin-top: 0 !important;
-  margin-bottom: 20px !important;
+/* Pílula sobre fundo claro (bege) */
+body:not(.dark) .eyebrow,
+.section:not(.section-dark) .eyebrow,
+.hero .eyebrow {
+  color: #7A5B28 !important;
+  background-color: rgba(122, 91, 40, 0.1) !important;
+  border: 1px solid rgba(122, 91, 40, 0.3) !important;
+}
+
+/* Pílula sobre fundo escuro (cards grafite) */
+.section-dark .eyebrow,
+.hero-card .eyebrow,
+.structure-content .eyebrow,
+.section-muted .eyebrow,
+div[style*="background: rgb(36"] .eyebrow {
+  color: #E5C38C !important;
+  background-color: rgba(229, 195, 140, 0.12) !important;
+  border: 1px solid rgba(229, 195, 140, 0.35) !important;
+}
+
+/* 2. Legibilidade do texto em fundo bege terroso */
+.hero-content .hero-subtitle,
+.hero-content p {
+  color: #1F2421 !important;
+  font-weight: 500 !important;
 }
 
 .hero-content .hero-description {
-  color: #4A4A4A !important;
-  font-size: 1.05rem !important;
-  line-height: 1.65 !important;
-  max-width: 520px !important;
-  margin-bottom: 28px !important;
+  color: #2D3748 !important;
+  font-weight: 400 !important;
 }
 
-/* Garante texto branco e visível no card escuro da direita */
-.hero-card,
+/* Subtítulos e parágrafos de seções sobre fundo bege */
+.section-header p,
+.section-text p,
+.section:not(.section-dark) h2 + p {
+  color: #24292F !important;
+  font-weight: 400 !important;
+  opacity: 0.95 !important;
+}
+
+/* 3. Botão da seção de transparência/estrutura */
+.structure-content .btn,
+.structure-content a.btn {
+  background-color: #D4A373 !important;
+  color: #1C1917 !important;
+  font-weight: 600 !important;
+  border: none !important;
+}
+
+
+/* =======================================================
+   REFINAMENTO DEFINITIVO DE CORES E CONTRASTES
+   ======================================================= */
+
+/* --- 1. TEXTOS DENTRO DOS CARDS ESCUROS (Legibilidade Máxima) --- */
+.section-dark p,
+.section-muted p,
 .hero-card p,
-.hero-card span {
+.hero-card span,
+.structure-content p,
+.section-grid p,
+div[style*="background: rgb(36"] p,
+div[style*="background-color: rgb(36"] p {
+  color: #E2E8F0 !important; /* Cinza claro luminoso / alto contraste */
+  opacity: 0.95 !important;
+}
+
+.section-dark .hero-subtitle,
+.section-dark h2 + p {
+  color: #CBD5E1 !important;
+}
+
+/* Títulos dos cards escuros */
+.section-dark h2,
+.structure-content h2,
+.section-grid h2 {
   color: #FFFFFF !important;
 }
 
-.hero-card p {
-  font-size: clamp(1.8rem, 2.5vw, 2.4rem) !important;
-  font-family: var(--font-heading, serif) !important;
+/* Links em cards escuros */
+.section-dark a:not(.btn),
+.structure-content a:not(.btn) {
+  color: #E5C38C !important;
+  text-decoration: underline !important;
   font-weight: 500 !important;
-  line-height: 1.25 !important;
 }
 
-.hero-card span {
-  color: #D1D5DB !important;
-  display: block;
-  margin-top: 12px;
+/* --- 2. TEXTOS SOBRE O FUNDO BEGE DO SITE --- */
+.hero-content p,
+.hero-content .hero-subtitle,
+.hero-content .hero-description,
+.section:not(.section-dark):not(.section-muted) p {
+  color: #1A1C1E !important; /* Grafite profundo bem nítido */
+  font-weight: 450 !important;
 }
+
+/* --- 3. PADRONIZAÇÃO DAS PÍLULAS (EYEBROWS) --- */
+.eyebrow,
+span.eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  padding: 5px 14px !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  margin-bottom: 14px !important;
+  width: fit-content !important;
+}
+
+/* Pílula no Fundo Bege (Discreta, elegante, sem relevo feio) */
+.section:not(.section-dark):not(.section-muted) .eyebrow,
+.hero .eyebrow,
+.final-cta-box .eyebrow {
+  color: #7A5826 !important;
+  background-color: rgba(140, 109, 63, 0.08) !important;
+  border: 1px solid rgba(140, 109, 63, 0.28) !important;
+}
+
+/* Pílula dentro de Cards Escuros */
+.section-dark .eyebrow,
+.section-muted .eyebrow,
+.structure-content .eyebrow {
+  color: #F1D4A7 !important;
+  background-color: rgba(241, 212, 167, 0.1) !important;
+  border: 1px solid rgba(241, 212, 167, 0.3) !important;
+}
+
+/* Botão da fábrica */
+.structure-content .btn,
+.structure-content a.btn {
+  background-color: #D4A373 !important;
+  color: #1A1A1A !important;
+  border: none !important;
+  font-weight: 600 !important;
+}
+
 
 /* =======================================================
-   H1 COMPOSTO (SEO + DESIGN ALTO PADRÃO)
+   CORREÇÃO CIRÚRGICA: PROCESSO / SECTION-MUTED
    ======================================================= */
 
-.hero-content h1.hero-title {
-  margin-top: 0 !important;
-  margin-bottom: 24px !important;
-  color: #242424 !important;
-  font-size: clamp(2.1rem, 3.4vw, 2.9rem) !important;
-  font-family: var(--font-heading, 'Playfair Display', serif) !important;
-  font-weight: 600 !important;
-  line-height: 1.2 !important;
-  letter-spacing: -0.015em !important;
+/* Garante texto branco/claro no bloco escuro de "Como trabalhamos" */
+.section-muted .section-heading p,
+.section-muted p {
+  color: #E2E8F0 !important; /* Branco fosco de alta legibilidade */
+  opacity: 0.95 !important;
 }
 
-/* O Kicker de SEO: texto secundário no topo do H1 sem deformar */
-.hero-content h1.hero-title .hero-kicker {
-  display: block !important;
+.section-muted .section-heading h2,
+.section-muted h2 {
+  color: #FFFFFF !important;
+}
+
+/* Evita que qualquer span filho herde borda/fundo caso haja resquício de aninhamento */
+.eyebrow .eyebrow,
+.eyebrow span {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+/* FORÇA BRANCO LUMINOSO NOS PARÁGRAFOS ESCUROS */
+p.text-light,
+.structure-content p,
+.section-heading p,
+.section-muted p {
+  color: #F3F4F6 !important;
+  opacity: 1 !important;
+}
+
+/* Remove cortes secos e linhas horizontais em transições de seções */
+hr,
+.section-divider,
+.final-cta {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+
+/* --- REFORMULACAO TOTAL EYEBROWS --- */
+
+/* Base da Pílula (maior, mais nítida e encorpada) */
+.eyebrow,
+span.eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 0.82rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.16em !important;
-  color: #8C6D3F !important; /* Dourado escuro sofisticado */
-  margin-bottom: 14px !important;
+  padding: 8px 20px !important;
+  border-radius: 9999px !important;
+  box-sizing: border-box !important;
+  line-height: 1.1 !important;
+  margin-bottom: 18px !important;
+  transition: all 0.2s ease !important;
 }
 
-.hero-content .hero-description {
-  color: #3F3F46 !important;
-  font-size: 1.05rem !important;
-  line-height: 1.65 !important;
-  max-width: 530px !important;
-  margin-bottom: 28px !important;
+/* 1. Pílulas no Fundo Claro (Bege do site) - Legibilidade e presença forte */
+body:not(.dark) .eyebrow,
+.section:not(.section-dark):not(.section-muted) .eyebrow,
+.final-cta-box .eyebrow {
+  color: #2E2419 !important; /* Tom café/grafite escuro de altíssimo contraste */
+  background-color: rgba(62, 48, 32, 0.08) !important;
+  border: 1.5px solid rgba(62, 48, 32, 0.35) !important;
+}
+
+/* 2. Pílulas dentro de Cards e Seções Escuras */
+.section-dark .eyebrow,
+.section-muted .eyebrow,
+.structure-content .eyebrow,
+.hero-card .eyebrow {
+  color: #FADCA8 !important; /* Dourado nobre claro */
+  background-color: rgba(250, 220, 168, 0.12) !important;
+  border: 1.5px solid rgba(250, 220, 168, 0.4) !important;
+}
+
+/* Garante texto branco em qualquer subtítulo sobre fundo grafite */
+.section-dark h2 + p,
+.section-muted h2 + p,
+.structure-content h2 + p,
+.section-dark .section-subtitle,
+.section-muted .section-subtitle {
+  color: #F1F5F9 !important;
+  opacity: 0.95 !important;
+}
+
+
+/* =======================================================
+   CORREÇÃO GLOBAL MULTI-PÁGINAS: CONTRASTE, PÍLULAS E ALINHAMENTO
+   ======================================================= */
+
+/* 1. TEXTOS DE APOIO EM CARDS ESCUROS (Legibilidade Absoluta) */
+.section-dark p,
+.section-muted p,
+.hero-card p,
+.structure-content p,
+.section-heading p,
+.final-cta-box p,
+.partner-content p,
+.portfolio-header p,
+.projects-header p,
+h2 + p,
+.section-dark h2 + p,
+.section-muted h2 + p {
+  color: #F1F5F9 !important; /* Branco luminoso suave */
+  opacity: 0.95 !important;
+}
+
+/* Garante texto escuro apenas quando explicitamente sobre o fundo claro */
+.section:not(.section-dark):not(.section-muted) > .container > p,
+.section:not(.section-dark):not(.section-muted) > .container > .section-heading > p {
+  color: #1F2421 !important;
+}
+
+/* 2. PÍLULAS / EYEBROWS (Mais encorpadas e destacadas) */
+.eyebrow,
+span.eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: var(--font-body, sans-serif) !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.16em !important;
+  padding: 7px 18px !important;
+  border-radius: 9999px !important;
+  margin-bottom: 16px !important;
+  line-height: 1 !important;
+}
+
+/* Pílula no fundo claro (bege) */
+body:not(.dark) .eyebrow,
+.section:not(.section-dark):not(.section-muted) .eyebrow,
+.structure-preview .eyebrow {
+  color: #2D2216 !important;
+  background-color: rgba(45, 34, 22, 0.08) !important;
+  border: 1.5px solid rgba(45, 34, 22, 0.4) !important;
+}
+
+/* Pílula no fundo escuro (cards pretos/grafite) */
+.section-dark .eyebrow,
+.section-muted .eyebrow,
+.hero-card .eyebrow,
+div[style*="background: rgb(36"] .eyebrow {
+  color: #F8E2BE !important; /* Dourado suave luminoso */
+  background-color: rgba(248, 226, 190, 0.12) !important;
+  border: 1.5px solid rgba(248, 226, 190, 0.45) !important;
+}
+
+/* 3. FILTROS DA PÁGINA DE PROJETOS */
+.project-filters,
+.filter-tabs {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  margin-bottom: 32px !important;
+}
+
+.project-filters button,
+.project-filters a,
+.filter-tab {
+  color: #F1F5F9 !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  padding: 8px 20px !important;
+  border-radius: 999px !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+.project-filters .active,
+.filter-tab.active {
+  background: #D4A373 !important;
+  color: #1A1A1A !important;
+  border-color: #D4A373 !important;
+  font-weight: 600 !important;
+}
+
+/* 4. ALINHAMENTO DA SEÇÃO ESTRUTURA (IMAGEM + TEXTO) */
+.structure-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 56px !important;
+  align-items: center !important; /* Alinhamento vertical centralizado */
+}
+
+.structure-visual,
+.structure-visual .image-placeholder {
+  height: 100% !important;
+  min-height: 420px !important;
+  border-radius: 16px !important;
+}
+
+.structure-content {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+
+/* --- CORREÇÕES ESPECÍFICAS DE CLASSES REAIS --- */
+
+/* 1. Filtros da página de projetos (.filter-pill) */
+.filter-pill,
+a.filter-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 22px !important;
+  border-radius: 999px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  color: #E2E8F0 !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.2s ease !important;
+}
+
+.filter-pill:hover,
+.filter-pill.active {
+  background-color: #D4A373 !important;
+  color: #181A1B !important;
+  border-color: #D4A373 !important;
+}
+
+/* 2. Parágrafos em cards escuros de todas as seções */
+.section-heading p,
+.portfolio-header p,
+.partner-content p,
+.structure-content p {
+  color: #F1F5F9 !important;
+  opacity: 0.95 !important;
+}
+
+/* 3. Destaque das pílulas (.eyebrow) em qualquer página */
+.eyebrow,
+span.eyebrow {
+  display: inline-flex !important;
+  padding: 7px 18px !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  border-radius: 9999px !important;
+  margin-bottom: 14px !important;
+  line-height: 1 !important;
+}
+
+/* Pílula no escuro: Relacionamento Profissional, Portfólio, Como Trabalhamos */
+.section-heading .eyebrow,
+.structure-content .eyebrow,
+.section-dark .eyebrow,
+.section-muted .eyebrow {
+  color: #FADCA8 !important;
+  background-color: rgba(250, 220, 168, 0.14) !important;
+  border: 1.5px solid rgba(250, 220, 168, 0.45) !important;
+}
+
+/* Pílula no fundo claro: Visitação, Diferenciais, Soluções */
+body:not(.dark) .structure-preview .eyebrow,
+.section:not(.section-dark):not(.section-muted) .eyebrow {
+  color: #2E2419 !important;
+  background-color: rgba(46, 36, 25, 0.08) !important;
+  border: 1.5px solid rgba(46, 36, 25, 0.35) !important;
+}
+
+/* 4. Alinhamento vertical da seção Conheça nossa estrutura */
+.structure-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 48px !important;
+  align-items: center !important;
+}
+
+.structure-visual {
+  min-height: auto !important;
+  height: 100% !important;
+}
+
+.structure-visual .image-placeholder {
+  width: 100% !important;
+  height: 380px !important;
+  border-radius: 16px !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.structure-content {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+
+/* === CORRECOES DEFINITIVAS IMPEL === */
+
+/* 1. TEXTOS EM BLOCOS ESCUROS (Legibilidade Cristalina) */
+.section-muted p,
+.section-muted .section-heading p,
+.section-dark p,
+.section-dark .section-heading p,
+.structure-content p,
+.partner-content p {
+  color: #F8FAFC !important;
+  opacity: 0.95 !important;
+}
+
+/* 2. PILULAS DE FILTRO (.project-filter no singular) */
+.project-filter {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  margin-bottom: 32px !important;
+}
+
+.project-filter .filter-pill,
+.project-filter a.filter-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 22px !important;
+  border-radius: 999px !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  color: #F1F5F9 !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+.project-filter .filter-pill.active,
+.project-filter .filter-pill:hover {
+  background: #D4A373 !important;
+  color: #121417 !important;
+  border-color: #D4A373 !important;
+}
+
+/* 3. EYEBROWS / PILULAS EM BLOCOS ESCUROS */
+.section-muted .eyebrow,
+.section-dark .eyebrow,
+.structure-content .eyebrow,
+.section-heading .eyebrow {
+  display: inline-flex !important;
+  color: #FADCA8 !important;
+  background-color: rgba(250, 220, 168, 0.15) !important;
+  border: 1.5px solid rgba(250, 220, 168, 0.45) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  padding: 7px 18px !important;
+  border-radius: 9999px !important;
+  margin-bottom: 16px !important;
+}
+
+/* 4. ALINHAMENTO DA SECAO DE ESTRUTURA */
+.structure-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 48px !important;
+  align-items: center !important;
+}
+
+.structure-visual .image-placeholder {
+  min-height: 400px !important;
+  border-radius: 16px !important;
+  background-size: cover !important;
 }
