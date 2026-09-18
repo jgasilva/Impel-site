@@ -610,3 +610,61 @@ button.btn-primary:hover,
   border-color: #F7F4F0 !important;
   transition: all 0.25s ease-in-out;
 }
+
+/* =======================================================
+   CORREÇÃO DA SEÇÃO ESTRUTURA / FÁBRICA PRÓPRIA (MOBILE)
+   ======================================================= */
+
+.structure-preview {
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.structure-visual {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.structure-visual .image-placeholder {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 280px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.structure-content {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .structure-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .structure-content {
+    padding: 0 16px 24px 16px !important;
+  }
+
+  .structure-content h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .structure-content p {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    word-break: normal !important;
+  }
+}
