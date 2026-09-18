@@ -563,24 +563,34 @@ video,
 .step-card img,
 .factory-image,
 [class*="image"] img {
+  max-width: 100% !important;
+  height: auto !important;
   object-fit: cover;
 }
 
 @media (max-width: 768px) {
   .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   .section-grid,
   .steps-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
   }
 
   .section-muted,
   .section-text {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     word-break: break-word;
   }
 
   footer .container,
   .footer-content {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
   }
 }
 
@@ -595,5 +605,8 @@ a[href*="contato"]:hover,
 button.btn-primary:hover,
 .hero-actions a:hover,
 .cta-section a:hover {
+  background-color: #F7F4F0 !important;
+  color: #C4C7AC !important;
+  border-color: #F7F4F0 !important;
   transition: all 0.25s ease-in-out;
 }
