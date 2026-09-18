@@ -699,3 +699,61 @@ button.btn-primary:hover,
   border-color: rgba(120, 94, 52, 0.3) !important;
   font-weight: 600 !important;
 }
+
+/* =======================================================
+   REFINAMENTO VISUAL DO HERO & CONTRASTES
+   ======================================================= */
+
+.hero-content .eyebrow {
+  display: inline-block !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  color: #8C6D3F !important;
+  padding: 6px 14px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(140, 109, 63, 0.25) !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  margin-bottom: 20px !important;
+  width: fit-content !important;
+}
+
+.hero-content h1.hero-title {
+  color: #242424 !important;
+  font-size: clamp(2rem, 3.2vw, 2.85rem) !important;
+  font-family: var(--font-heading, serif) !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.01em !important;
+  margin-top: 0 !important;
+  margin-bottom: 20px !important;
+}
+
+.hero-content .hero-description {
+  color: #4A4A4A !important;
+  font-size: 1.05rem !important;
+  line-height: 1.65 !important;
+  max-width: 520px !important;
+  margin-bottom: 28px !important;
+}
+
+/* Garante texto branco e visível no card escuro da direita */
+.hero-card,
+.hero-card p,
+.hero-card span {
+  color: #FFFFFF !important;
+}
+
+.hero-card p {
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem) !important;
+  font-family: var(--font-heading, serif) !important;
+  font-weight: 500 !important;
+  line-height: 1.25 !important;
+}
+
+.hero-card span {
+  color: #D1D5DB !important;
+  display: block;
+  margin-top: 12px;
+}
