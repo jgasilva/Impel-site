@@ -543,132 +543,44 @@
    CORREÇÃO DE RESPONSIVIDADE MOBILE & OVERFLOW
    ======================================================= */
 
-/* Impede estouro horizontal em qualquer elemento */
 html, body {
   max-width: 100vw;
   overflow-x: hidden;
 }
 
-.container, 
-.section-grid, 
-.steps-grid, 
-.card-dark, 
+.container,
+.section-grid,
+.steps-grid,
+.card-dark,
 .section {
   max-width: 100%;
   box-sizing: border-box;
 }
 
-/* Garante que imagens de fábrica/produção não estourem o card */
-img, 
-picture, 
-video, 
-.step-card img, 
-.factory-image, 
+img,
+picture,
+video,
+.step-card img,
+.factory-image,
 [class*="image"] img {
-  max-width: 100% !important;
-  height: auto !important;
-  object-fit: cover;
-}
-
-/* Alinhamento mobile limpo para evitar textos colados nas bordas */
-@media (max-width: 768px) {
-  .container {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-
-  .section-grid,
-  .steps-grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-  }
-
-  /* Corrige card com imagem que estourava para a direita */
-  .section-muted,
-  .section-text {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    word-break: break-word;
-  }
-
-  /* Ajuste no rodapé para não colar */
-  footer .container,
-  .footer-content {
-    padding-left: 24px !important;
-    padding-right: 24px !important;
-  }
-}
-
-/* =======================================================
-   HOVER ESPECÍFICO DOS BOTÕES "SOLICITAR ORÇAMENTO"
-   ======================================================= */
-
-/* Fundo #F7F4F0 e texto #C4C7AC no estado hover */
-a[href*="orcamento"]:hover,
-a[href*="contato"]:hover,
-.btn-primary:hover,
-.btn-orcamento:hover,
-button.btn-primary:hover,
-.hero-actions a:hover,
-.cta-section a:hover {
-  background-color: #F7F4F0 !important;
-  color: #C4C7AC !important;
-  border-color: #F7F4F0 !important;
-  transition: all 0.25s ease-in-out;
-}
-
-/* =======================================================
-   CORREÇÃO DE RESPONSIVIDADE MOBILE & OVERFLOW
-   ======================================================= */
-
-html, body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-.container, 
-.section-grid, 
-.steps-grid, 
-.card-dark, 
-.section {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-img, 
-picture, 
-video, 
-.step-card img, 
-.factory-image, 
-[class*="image"] img {
-  max-width: 100% !important;
-  height: auto !important;
   object-fit: cover;
 }
 
 @media (max-width: 768px) {
   .container {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
   }
 
   .section-grid,
   .steps-grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
   }
 
   .section-muted,
   .section-text {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
     word-break: break-word;
   }
 
   footer .container,
   .footer-content {
-    padding-left: 24px !important;
-    padding-right: 24px !important;
   }
 }
 
@@ -683,8 +595,5 @@ a[href*="contato"]:hover,
 button.btn-primary:hover,
 .hero-actions a:hover,
 .cta-section a:hover {
-  background-color: #F7F4F0 !important;
-  color: #C4C7AC !important;
-  border-color: #F7F4F0 !important;
   transition: all 0.25s ease-in-out;
 }
