@@ -1,3 +1,4 @@
+#site-header { background-color: rgba(196, 181, 165, 0.88); }
 .site-header {
   position: sticky;
   top: 0;
@@ -52,7 +53,33 @@
   min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
-  padding: 40px 0 60px;
+  padding: 60px 0 80px;
+  background-color: var(--color-charcoal) !important;
+  color: var(--color-muted) !important;
+}
+
+.hero h1,
+.hero .hero-title {
+  color: #ffffff !important;
+}
+
+.hero p,
+.hero-subtitle,
+.hero-description {
+  color: var(--color-muted) !important;
+  opacity: 0.9;
+}
+
+.hero h1,
+.hero .hero-title {
+  color: #ffffff !important;
+}
+
+.hero p,
+.hero-subtitle,
+.hero-description {
+  color: var(--color-muted) !important;
+  opacity: 0.9;
 }
 
 .hero-grid {
@@ -95,11 +122,14 @@
 }
 
 .hero-card {
-  min-height: 400px;
+  min-height: auto;
   border-radius: var(--radius, 16px);
-  background: #242424;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   padding: 48px 40px;
   color: #FFFFFF;
 }
@@ -144,4 +174,192 @@
 
 .hero-card p {
   color: #FFFFFF !important;
+}
+
+/* Padronização escura da Hero da Home */
+.hero {
+  background-color: #2D2D2D !important;
+  color: #EFEAE2 !important;
+}
+
+.hero .hero-title,
+.hero h1 {
+  color: #ffffff !important;
+}
+
+.hero .hero-subtitle,
+.hero .hero-description,
+.hero p {
+  color: #EFEAE2 !important;
+  opacity: 0.9 !important;
+}
+
+
+/* Hero Home: Altura enxuta e contraste correto */
+.hero {
+  min-height: auto !important;
+  padding: 60px 0 70px !important;
+  background-color: var(--color-charcoal) !important;
+}
+
+.hero .hero-content,
+.hero .hero-grid {
+  display: grid;
+  align-items: center;
+  gap: 48px;
+}
+
+/* Tipografia à esquerda: contraste estrito com o Charcoal */
+.hero h1,
+.hero .hero-title,
+.hero-content h1,
+.hero-copy h1 {
+  color: #FFFFFF !important;
+  font-size: clamp(2.2rem, 4vw, 3.2rem) !important;
+  line-height: 1.15 !important;
+  margin-bottom: 20px !important;
+}
+
+.hero p,
+.hero-subtitle,
+.hero-description,
+.hero-content p,
+.hero-copy p {
+  color: #EFEAE2 !important;
+  opacity: 0.9 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 28px !important;
+}
+
+/* Card da direita na Home */
+.hero-card {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: var(--radius) !important;
+  padding: 40px !important;
+}
+
+/* Aplicação Estrita do Manual de Identidade Visual - Hero Home */
+body section.hero {
+  background-color: #2D2D2D !important;
+}
+
+body section.hero .hero-content .hero-title,
+body section.hero h1.hero-title {
+  color: #F7F4F0 !important;
+  font-family: var(--font-title) !important;
+  font-size: clamp(2.3rem, 4vw, 3.3rem) !important;
+  line-height: 1.15 !important;
+  margin-bottom: 22px !important;
+}
+
+body section.hero .hero-content .hero-subtitle,
+body section.hero p.hero-subtitle {
+  color: #AF9F8F !important;
+  font-size: 1.22rem !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  margin-bottom: 18px !important;
+}
+
+body section.hero .hero-content .hero-description,
+body section.hero p.hero-description {
+  color: #F7F4F0 !important;
+  opacity: 0.88 !important;
+  font-size: 1.02rem !important;
+  line-height: 1.65 !important;
+  margin-bottom: 32px !important;
+}
+
+/* Card Direito alinhado à cartela */
+body section.hero .hero-card h3,
+body section.hero .hero-card .card-title {
+  color: #F7F4F0 !important;
+}
+
+body section.hero .hero-card p {
+  color: #AF9F8F !important;
+}
+
+
+/* ===================================================
+   HERO HOME: ESTRUTURA, ALINHAMENTO E PROPORÇÃO
+   =================================================== */
+.hero {
+  padding: 80px 0 !important;
+  min-height: auto !important;
+  background-color: #2D2D2D !important;
+}
+
+.hero .hero-grid {
+  display: grid !important;
+  grid-template-columns: 1.25fr 0.85fr !important;
+  align-items: center !important;
+  gap: 64px !important;
+}
+
+.hero .hero-content {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+.hero .hero-content .hero-title,
+.hero .hero-content h1 {
+  color: #F7F4F0 !important;
+  font-family: var(--font-title) !important;
+  font-size: clamp(2.4rem, 3.8vw, 3.4rem) !important;
+  line-height: 1.16 !important;
+  margin-bottom: 20px !important;
+}
+
+.hero .hero-content .hero-subtitle {
+  color: #AF9F8F !important;
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  margin-bottom: 16px !important;
+}
+
+.hero .hero-content .hero-description {
+  color: #F7F4F0 !important;
+  opacity: 0.9 !important;
+  font-size: 1.02rem !important;
+  line-height: 1.65 !important;
+  margin-bottom: 32px !important;
+}
+
+/* Card da Direita: Centralizado e alinhado à esquerda */
+.hero .hero-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  min-height: 320px !important;
+  height: 100% !important;
+  max-height: 420px !important;
+  padding: 44px 40px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  background: rgba(255, 255, 255, 0.035) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 16px !important;
+}
+
+.hero .hero-card p {
+  color: #F7F4F0 !important;
+  font-family: var(--font-title) !important;
+  font-size: 1.7rem !important;
+  line-height: 1.3 !important;
+  margin: 0 !important;
+}
+
+.hero .hero-card span {
+  display: block !important;
+  margin-top: 14px !important;
+  color: #AF9F8F !important;
+  font-family: var(--font-body) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.55 !important;
 }

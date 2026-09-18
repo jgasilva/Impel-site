@@ -339,9 +339,37 @@
 }
 
 .page-hero {
-  padding: 72px 0 84px;
-  background: var(--color-offwhite);
+  padding: 80px 0 90px;
+  background-color: var(--color-charcoal) !important;
+  color: var(--color-muted) !important;
 }
+
+.page-hero h1 {
+  color: #ffffff !important;
+}
+
+.page-hero p {
+  color: var(--color-muted) !important;
+  opacity: 0.9;
+}
+
+
+/* Tag/Pill visivel em secoes escuras e hero */
+.page-hero .eyebrow,
+.hero .eyebrow {
+  display: inline-block !important;
+  color: var(--color-gold) !important;
+  background: rgba(214, 171, 120, 0.12) !important;
+  border: 1px solid rgba(214, 171, 120, 0.35) !important;
+  padding: 6px 16px !important;
+  border-radius: 999px !important;
+  font-size: 0.82rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  margin-bottom: 20px !important;
+}
+
 
 .page-hero-content {
   max-width: 980px;
@@ -1105,10 +1133,21 @@ span.eyebrow {
 
 /* Pílula no fundo claro: Visitação, Diferenciais, Soluções */
 body:not(.dark) .structure-preview .eyebrow,
-.section:not(.section-dark):not(.section-muted) .eyebrow {
+.section:not(.section-dark):not(.section-muted):not(.page-hero) .eyebrow {
   color: #2E2419 !important;
   background-color: rgba(46, 36, 25, 0.08) !important;
   border: 1.5px solid rgba(46, 36, 25, 0.35) !important;
+}
+
+/* Força absoluta para eyebrow em page-hero e hero */
+body section.page-hero .eyebrow,
+body section.hero .eyebrow,
+.page-hero span.eyebrow,
+.hero span.eyebrow {
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1.5px solid rgba(214, 171, 120, 0.5) !important;
+  display: inline-flex !important;
 }
 
 /* 4. Alinhamento vertical da seção Conheça nossa estrutura */
@@ -1212,4 +1251,416 @@ body:not(.dark) .structure-preview .eyebrow,
   min-height: 400px !important;
   border-radius: 16px !important;
   background-size: cover !important;
+}
+
+/* Correção de contraste das tags/eyebrows em temas escuros */
+.eyebrow,
+.page-hero .eyebrow,
+.hero .eyebrow,
+.section-dark .eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.12) !important;
+  border: 1px solid rgba(214, 171, 120, 0.4) !important;
+  padding: 6px 14px !important;
+  border-radius: 999px !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 20px !important;
+}
+
+
+/* Regra Oficial Manual: Aplicação em Fundo Charcoal #2D2D2D */
+.page-hero .eyebrow,
+.hero .eyebrow {
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1.5px solid rgba(214, 171, 120, 0.5) !important;
+  display: inline-flex !important;
+}
+
+/* ===================================================
+   CALIBRAÇÃO OFICIAL MANUAL IMPEL - HOME (INDEX)
+   =================================================== */
+
+/* 1. Hero Textos e Card Direito */
+.hero .hero-subtitle {
+  color: #AF9F8F !important;
+  opacity: 1 !important;
+}
+
+.hero .hero-description {
+  color: #F7F4F0 !important;
+  opacity: 0.9 !important;
+}
+
+.hero-card h3,
+.hero-card .card-title,
+.hero-card p:first-of-type {
+  color: #F7F4F0 !important;
+  font-family: var(--font-title) !important;
+  font-size: 1.5rem !important;
+  margin-bottom: 12px !important;
+}
+
+.hero-card p,
+.hero-card .card-subtitle {
+  color: #AF9F8F !important;
+  opacity: 1 !important;
+}
+
+/* 2. Pills (Eyebrows) em seções escuras (Charcoal #2D2D2D) */
+.section-dark .eyebrow,
+.structure-content .eyebrow,
+.how-it-works .eyebrow,
+div[class*="dark"] .eyebrow,
+section[class*="dark"] .eyebrow {
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1.5px solid rgba(214, 171, 120, 0.45) !important;
+  display: inline-flex !important;
+}
+
+/* 3. Pills (Eyebrows) em fundo claro/linho */
+.section:not(.section-dark) .eyebrow,
+.solutions-section .eyebrow,
+.projects-preview .eyebrow,
+.final-cta-box .eyebrow {
+  color: #2D2D2D !important;
+  background-color: rgba(45, 45, 45, 0.06) !important;
+  border: 1.5px solid rgba(45, 45, 45, 0.25) !important;
+  display: inline-flex !important;
+}
+
+/* 4. Números e cards da seção "Como Trabalhamos" */
+.how-it-works .step-card,
+.process-grid .process-card {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.how-it-works .step-number,
+.process-grid .step-number {
+  color: #D6AB78 !important;
+  font-weight: 700 !important;
+}
+
+.how-it-works .step-title,
+.process-grid .step-title {
+  color: #F7F4F0 !important;
+}
+
+/* 5. Seção de Projetos - Fundo coerente com a paleta */
+.projects-preview {
+  background-color: var(--color-muted) !important;
+}
+
+/* ===================================================
+   TAGS (.EYEBROW) DOS BLOCOS ESCUROS DA HOME (OFICIAL)
+   =================================================== */
+
+/* 1. Transparência */
+.structure-content span.eyebrow,
+.structure-content .eyebrow {
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1.5px solid rgba(214, 171, 120, 0.5) !important;
+  display: inline-flex !important;
+}
+
+/* 2. Quem é a IMPEL */
+.section-grid span.eyebrow,
+.section-grid .eyebrow {
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1.5px solid rgba(214, 171, 120, 0.5) !important;
+  display: inline-flex !important;
+}
+
+/* 3. Como Trabalhamos */
+.section-heading span.eyebrow,
+.section-heading .eyebrow {
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1.5px solid rgba(214, 171, 120, 0.5) !important;
+  display: inline-flex !important;
+}
+
+/* ===================================================
+   CORREÇÃO DEFINITIVA: HERO ALINHAMENTO E DIFERENCIAIS
+   =================================================== */
+
+/* Proporção e Alinhamento Premium - Hero Home */
+.hero {
+  padding: 70px 0 80px !important;
+}
+
+.hero .hero-grid {
+  display: grid !important;
+  grid-template-columns: 1.4fr 0.9fr !important;
+  align-items: center !important;
+  gap: 48px !important;
+  max-width: 1240px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.hero .hero-content {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.hero-content .hero-title,
+.hero-content h1 {
+  font-size: clamp(2.4rem, 3.4vw, 3.2rem) !important;
+  line-height: 1.18 !important;
+  margin-bottom: 20px !important;
+  white-space: normal !important;
+}
+
+.hero-content .hero-subtitle {
+  max-width: 580px !important;
+  margin-bottom: 14px !important;
+}
+
+.hero-content .hero-description {
+  max-width: 580px !important;
+  margin-bottom: 28px !important;
+}
+
+.hero .hero-card {
+  width: 100% !important;
+  max-width: 420px !important;
+  justify-self: end !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-height: 260px !important;
+  padding: 36px 32px !important;
+  box-sizing: border-box !important;
+  background: rgba(255, 255, 255, 0.035) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 12px !important;
+}
+
+.hero .hero-card p {
+  font-size: 1.35rem !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+}
+
+.hero .hero-card span {
+  display: block !important;
+  margin-top: 10px !important;
+  line-height: 1.5 !important;
+}
+
+/* 2. Pílula Diferenciais (Stats Section - Fundo Claro) */
+.stats-section .section-heading .eyebrow,
+.stats-section span.eyebrow {
+  color: #2D2D2D !important;
+  background-color: rgba(45, 45, 45, 0.08) !important;
+  border: 1.5px solid rgba(45, 45, 45, 0.4) !important;
+  font-weight: 700 !important;
+  display: inline-flex !important;
+  opacity: 1 !important;
+}
+
+/* ===================================================
+   ALINHAMENTO EM LINHA RETA DA COLUNA DE TEXTO DA HERO
+   =================================================== */
+
+.hero .hero-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.hero-content .hero-title,
+.hero-content h1 {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  text-align: left !important;
+  margin-bottom: 20px !important;
+}
+
+.hero-content .hero-subtitle,
+.hero-content .hero-description,
+.hero-content p {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  text-align: left !important;
+  max-width: 600px !important;
+}
+
+.hero-content .hero-actions {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  align-self: flex-start !important;
+}
+
+.hero-content .hero-actions .btn {
+  margin-left: 0 !important;
+}
+
+/* ===================================================
+   REFINAMENTO PROPORCIONAL DEFINITIVO DA HERO
+   =================================================== */
+
+/* Enxuga a distância e compacta o bloco da esquerda */
+.hero-content {
+  gap: 16px !important;
+}
+
+.hero-content .hero-title,
+.hero-content h1 {
+  font-size: clamp(2.3rem, 3.4vw, 3.1rem) !important;
+  line-height: 1.15 !important;
+  margin-bottom: 0 !important;
+  max-width: 620px !important;
+}
+
+.hero-content .hero-subtitle {
+  font-size: 1.15rem !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  max-width: 560px !important;
+}
+
+.hero-content .hero-description {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  max-width: 560px !important;
+}
+
+.hero-content .hero-actions {
+  margin-top: 12px !important;
+}
+
+/* Card da direita: altura equilibrada e texto centralizado verticalmente */
+.hero .hero-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  min-height: 280px !important;
+  max-height: 340px !important;
+  padding: 40px !important;
+  box-sizing: border-box !important;
+}
+
+.hero .hero-card p {
+  font-size: 1.5rem !important;
+  line-height: 1.3 !important;
+  margin: 0 !important;
+}
+
+.hero .hero-card span {
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  margin-top: 12px !important;
+  display: block !important;
+}
+
+/* ===================================================
+   CORREÇÃO CIRÚRGICA: TRANSPARÊNCIA E COMO TRABALHAMOS
+   =================================================== */
+
+/* 1. Pílula Transparência (fundo escuro de structure-content) */
+.structure-content .eyebrow,
+.structure-content span.eyebrow {
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1px solid rgba(214, 171, 120, 0.45) !important;
+  display: inline-flex !important;
+  opacity: 1 !important;
+  font-weight: 600 !important;
+}
+
+/* 2. Pílula Como Trabalhamos (section-muted escura) */
+.section-muted .section-heading .eyebrow,
+.section-muted span.eyebrow {
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1px solid rgba(214, 171, 120, 0.45) !important;
+  display: inline-flex !important;
+  opacity: 1 !important;
+  font-weight: 600 !important;
+}
+
+/* ===================================================
+   PADRONIZAÇÃO GERAL: PÍLULAS SOBRE FUNDO ESCURO
+   (Modelo idêntico ao de Como Trabalhamos)
+   =================================================== */
+
+/* Seleciona todas as pílulas em áreas escuras: Hero, Quem Somos, Estrutura, etc */
+.hero .eyebrow,
+.structure-content .eyebrow,
+.about-section .eyebrow,
+.about-content .eyebrow,
+.section-dark .eyebrow,
+.section-muted .eyebrow,
+div[style*="background: rgb(36"] .eyebrow,
+div[style*="background-color: rgb(36"] .eyebrow,
+div[style*="#2D2D2D"] .eyebrow,
+section[style*="#2D2D2D"] .eyebrow,
+.stats-section-dark .eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.76rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.14em !important;
+  padding: 6px 16px !important;
+  border-radius: 9999px !important;
+  margin-bottom: 16px !important;
+  box-sizing: border-box !important;
+  line-height: 1 !important;
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1px solid rgba(214, 171, 120, 0.45) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* ===================================================
+   REFINAMENTO VISUAL: PROJETOS PREVIEW (FUNDO CLARO)
+   =================================================== */
+
+.projects-preview .section-heading h2 {
+  color: #2D2D2D !important;
+}
+
+.projects-preview .section-heading p {
+  color: #4A5568 !important;
+  opacity: 1 !important;
+}
+
+.projects-preview .project-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(45, 45, 45, 0.08) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+}
+
+.projects-preview .project-card h3 {
+  color: #2D2D2D !important;
+  font-family: var(--font-title) !important;
+  font-size: 1.25rem !important;
+  margin-bottom: 8px !important;
+}
+
+.projects-preview .project-card p {
+  color: #5A5A5A !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
 }
