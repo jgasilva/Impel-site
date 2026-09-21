@@ -11,23 +11,44 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages.css">
 
-  <style>
+    <style>
     .form-group { margin-bottom: 22px; }
     .form-group label { display: block; color: #FFFFFF; font-size: 0.92rem; font-weight: 600; margin-bottom: 8px; }
     .form-group input {
-      width: 100%; background: #2A2D30; border: 1px solid rgba(255, 255, 255, 0.15);
+      width: 100%; background: #25282B; border: 1px solid rgba(255, 255, 255, 0.22);
       border-radius: 12px; padding: 14px 18px; color: #FFFFFF; font-size: 1rem; outline: none; transition: border-color 0.2s;
+    }
+    .form-group input::placeholder {
+      color: #94A3B8;
+      opacity: 1;
     }
     .form-group input:focus { border-color: #D6AB78; }
     .objective-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 8px; }
     @media (max-width: 650px) { .objective-grid { grid-template-columns: 1fr; } }
     .objective-option {
-      background: #2A2D30; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 12px;
-      padding: 14px 12px; text-align: center; color: #CBD5Q1; font-size: 0.9rem; font-weight: 600;
-      cursor: pointer; transition: all 0.2s ease; user-select: none;
+      background: #25282B !important;
+      border: 1px solid rgba(255, 255, 255, 0.22) !important;
+      border-radius: 12px;
+      padding: 14px 12px;
+      text-align: center;
+      color: #F1F5F9 !important;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
     }
-    .objective-option:hover { background: rgba(214, 171, 120, 0.1); border-color: #D6AB78; color: #FFFFFF; }
-    .objective-option.selected { background: #D6AB78; border-color: #D6AB78; color: #1E2022; font-weight: 700; }
+    .objective-option:hover {
+      background: rgba(214, 171, 120, 0.15) !important;
+      border-color: #D6AB78 !important;
+      color: #FFFFFF !important;
+    }
+    .objective-option.selected {
+      background: #D6AB78 !important;
+      border-color: #D6AB78 !important;
+      color: #111315 !important;
+      font-weight: 700 !important;
+    }
   </style>
 </head>
 <body>
@@ -47,14 +68,12 @@
       <div class="container" style="background: #DAD2C5; border-radius: 24px; padding: 48px; box-shadow: 0 8px 30px rgba(0,0,0,0.03); max-width: 82'px; margin: 0 auto;">
         <div style="background: #1E2022; border-radius: 20px; padding: 44px 38px; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
           <div style="text-align: center; margin-bottom: 32px;">
-            <span class="eyebrow" style="display: inline-flex; font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; padding: 6px 16px; border-radius: 9999px; margin-bottom: 12px; color: #D6AB78; background-color: rgba(214, 171, 120, 0.15); border: 1px solid rgba(214, 171, 120, 0.4);">
+            <span style="display: inline-block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; padding: 6px 18px; border-radius: 9999px; margin-bottom: 14px; color: #E7C99E; background: rgba(214, 171, 120, 0.15); border: 1px solid rgba(214, 171, 120, 0.4);">
               Contato Profissional Rápido
             </span>
-            <h2 style="color: #FFFFFF; font-size: 1.8rem; line-height: 1.25; margin-bottom: 8px;">Fale com a nossa equipe técnica</h2>
-            <p style="color: #94A4B8; font-size: 0.95rem; margin: 0;">Leva menos de 1 minuto para enviar sua demanda.</p>
-          </div>
-
-          <form id="formParceiro">
+            <h2 style="color: #FFFFFF; font-size: 1.85rem; font-weight: 600; line-height: 1.25; margin: 0 0 10px 0;">Fale com a nossa equipe técnica</h2>
+            <p style="color: #FFFFFF !important; font-size: 1rem; font-weight: 500; margin: 0; opacity: 0.95;">Leva menos de 1 minuto para enviar sua demanda.</p>
+          </div><form id="formParceiro">
             <div class="form-group">
               <label for="arqNome">Seu Nome / Nome do Escritório *</label>
               <input type="text" id="arqNome" required placeholder="Ex: Lucas / Studio Arquitetura">
