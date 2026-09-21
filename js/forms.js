@@ -10,15 +10,20 @@ function initContactForm() {
     const email = document.getElementById("leadEmail")?.value.trim() || "";
     const msg = document.getElementById("leadMessage")?.value.trim() || "";
 
-    const fullMessage = `*Novo Contato via Site - IMPEL*\n\n*Nome:* ${name}\n*Telefone:* ${phone}\n*E-mail:* ${email}\n*Mensagem:* ${msg}`;
+    if (!name || (!phone && !email)) {
+      alert("Por favor, informe seu nome e ao menos um meio de contato (telefone ou e-mail).");
+      return;
+    }
 
-    if (typeof openWhatsapp === "function") {
-      openWhatsapp(fullMessage);
-    } else if (typeof SITE_SETTINGS !== "undefined" && SITE_SETTINGS.whatsappNumber) {
-      const encoded = encodeURIComponent(fullMessage);
-      window.open(`https://wa.me/${SITE_SETTINGS.whatsappNumber}?text=${encoded}`, "_blank");
-    } else {
-      alert("Erro ao conectar com o WhatsApp. Verifique as configurações.");
+    const fullMessage = `*Novo Contato via Site - IMPEL*\n\n*Nome:* ${name}\n*Telefone:* ${phone}\n*E-mail:* ${email}\n*Mensagem:* ${msg}`;
+    const encoded = encodeURIComponent(fullMessage);
+    const targetPhone = typeof SITE_SETTINGS !== "undefined" && SITE_SETTINGS.whatsappNumber ? SITE_SETTINGS.whatsappNumber : "5583998586796";
+    const waUrl = `https://wa.me/${targetPhone}?text=${encoded}`;
+
+    // Tenta abrir em nova aba; se o navegador barrar o popup, redireciona diretamente na mesma janela
+    const newTab = window.open(waUrl, "_blank");
+    if (!newTab || newTab.closed || typeof newTab.closed === "undefined") {
+      window.location.href = waUrl;
     }
   };
 }
