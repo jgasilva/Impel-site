@@ -25,6 +25,41 @@
   <link rel="stylesheet" href="css/components.css?v=1789746345">
   <link rel="stylesheet" href="css/pages.css?v=1789746345">
   <link rel="stylesheet" href="css/responsive.css?v=1789746345">
+
+<style>
+/* ARQUITETOS CARDS STYLING */
+.arq-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 900px) {
+  .arq-cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .arq-cards-grid { grid-template-columns: 1fr; }
+}
+
+.arq-cards-grid .info-card {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 14px !important;
+  padding: 28px 22px !important;
+}
+.arq-cards-grid .info-card h3 {
+  color: #FFFFFF !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 10px !important;
+}
+.arq-cards-grid .info-card p {
+  color: #CBD5E1 !important;
+  font-size: 0.92rem !important;
+  line-height: 1.55 !important;
+  margin: 0 !important;
+}
+</style>
+
 </head>
 
 <body>
@@ -45,86 +80,76 @@
       </div>
     </section>
 
-<div class="section-divider"></div>
-
-    <section class="section">
-      <div class="container section-grid">
+    <section class="section" style="padding: 40px 0;">
+      <div class="container section-grid" style="background: #DAD2C5; border-radius: 24px; padding: 56px 48px; box-shadow: 0 8px 30px rgba(0,0,0,0.03); align-items: center; gap: 48px;">
         <div>
-          <span class="eyebrow">Respeito ao projeto</span>
-          <h2>Cada detalhe do projeto merece ser respeitado.</h2>
+          <span class="eyebrow" style="display: inline-block; background: rgba(30, 32, 34, 0.08); border: 1px solid rgba(30, 32, 34, 0.2); color: #1E2022 !important; font-weight: 700; letter-spacing: 0.1em; padding: 6px 18px; border-radius: 999px; margin-bottom: 16px;">Respeito ao projeto</span>
+          <h2 style="color: #1E2022 !important; font-size: 2.2rem; line-height: 1.25; margin-bottom: 14px;">Cada detalhe do projeto merece ser respeitado.</h2>
         </div>
 
         <div class="section-text">
-          <p>
-            Sabemos que cada projeto carrega decisões importantes relacionadas à estética,
-            funcionalidade e experiência do cliente.
+          <p style="color: #1E2022 !important; font-size: 1.05rem; line-height: 1.6; margin-bottom: 16px; font-weight: 500;">
+            Sabemos que cada projeto carrega decisões importantes relacionadas à estética, funcionalidade e experiência do cliente.
           </p>
-          <p>
-            Por isso, trabalhamos para executar cada solução conforme as definições técnicas aprovadas,
-            preservando a intenção do projeto e a confiança do profissional envolvido.
+          <p style="color: #374151 !important; font-size: 0.98rem; line-height: 1.6; margin: 0;">
+            Por isso, trabalhamos para executar cada solução conforme as definições técnicas aprovadas, preservando a intenção do projeto e a confiança do profissional envolvido.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="section section-muted">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Por que trabalhar com a IMPEL</span>
-          <h2>Uma estrutura preparada para executar com segurança.</h2>
-          <p  style="color: #F8FAFC !important; opacity: 0.95 !important;">
-            A produção própria permite maior controle sobre o processo, melhor acompanhamento da execução
-            e mais previsibilidade para arquitetos e clientes.
+        <section class="section section-muted" style="padding: 40px 0;">
+      <div class="container" style="background: #1E2022; border-radius: 24px; padding: 56px 48px; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+        <div class="section-heading" style="margin-bottom: 36px;">
+          <span class="eyebrow" style="display: inline-flex !important; align-items: center !important; font-size: 0.76rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.14em !important; padding: 6px 16px !important; border-radius: 9999px !important; margin-bottom: 16px !important; color: #D6AB78 !important; background-color: rgba(214, 171, 120, 0.15) !important; border: 1px solid rgba(214, 171, 120, 0.4) !important;">Por que trabalhar com a IMPEL</span>
+          <h2 style="color: #FFFFFF !important; font-size: 2.1rem; line-height: 1.25; margin-bottom: 12px;">Uma estrutura preparada para executar com segurança.</h2>
+          <p style="color: #CBD5E1 !important; font-size: 1.05rem; line-height: 1.6; max-width: 720px; margin: 0;">
+            A produção própria permite maior controle sobre o processo, melhor acompanhamento da execução e mais previsibilidade para arquitetos e clientes.
           </p>
         </div>
 
-        <div class="cards-grid">
+        <div class="arq-cards-grid">
           <article class="info-card">
             <h3>Produção própria</h3>
-            <p>Maior controle sobre qualidade, cronograma e acabamento.</p>
+            <p>Maior controle sobre qualidade, cronograma e acabamento refinado.</p>
           </article>
-
           <article class="info-card">
             <h3>Processos organizados</h3>
-            <p>Comunicação mais clara durante todas as etapas do projeto.</p>
+            <p>Comunicação clara e transparente durante todas as etapas do projeto.</p>
           </article>
-
           <article class="info-card">
             <h3>Suporte técnico</h3>
-            <p>Mais alinhamento durante a execução e maior segurança nas decisões.</p>
+            <p>Alinhamento técnico rigoroso durante a execução e resolução ágil.</p>
           </article>
-
           <article class="info-card">
-            <h3>Compromisso com execução</h3>
-            <p>Foco em transformar especificação em resultado final bem executado.</p>
+            <h3>Compromisso</h3>
+            <p>Foco total em transformar o projeto original em fidelidade executiva.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-dark">
-      <div class="container section-grid">
+        <section class="section" style="padding: 40px 0;">
+      <div class="container section-grid" style="background: #DAD2C5; border-radius: 24px; padding: 56px 48px; box-shadow: 0 8px 30px rgba(0,0,0,0.03); align-items: center; gap: 48px;">
         <div>
-          <span class="eyebrow">Relacionamento profissional</span>
-          <h2>Mais alinhamento durante a execução.</h2>
+          <span class="eyebrow" style="display: inline-block; background: rgba(30, 32, 34, 0.08); border: 1px solid rgba(30, 32, 34, 0.2); color: #1E2022 !important; font-weight: 700; letter-spacing: 0.1em; padding: 6px 18px; border-radius: 999px; margin-bottom: 16px;">Relacionamento profissional</span>
+          <h2 style="color: #1E2022 !important; font-size: 2.2rem; line-height: 1.25; margin-bottom: 14px;">Mais alinhamento durante a execução.</h2>
         </div>
 
         <div class="section-text">
-          <p  style="color: #F8FAFC !important; opacity: 0.95 !important;">
-            Acreditamos que uma boa comunicação reduz problemas e melhora resultados.
+          <p style="color: #1E2022 !important; font-size: 1.05rem; line-height: 1.6; margin-bottom: 16px;">
+            Acreditamos que uma boa comunicação reduz problemas e melhora resultados substancialmente.
           </p>
-          <p  style="color: #F8FAFC !important; opacity: 0.95 !important;">
-            Por isso, buscamos manter um relacionamento transparente e organizado durante todas
-            as etapas do projeto, respeitando as especificações definidas e a relação com o cliente final.
+          <p style="color: #374151 !important; font-size: 0.98rem; line-height: 1.6; margin-bottom: 24px;">
+            Por isso, mantemos um canal direto e estruturado com especificadores, respeitando as escolhas de materiais, prazos e a relação ética com o cliente final.
           </p>
-
-          <button class="btn btn-light" data-whatsapp>Apresentar Projeto</button>
+          <a href="contato.html" class="btn btn-primary" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; padding: 13px 26px !important; line-height: 1 !important;">Cadastrar Parceria</a>
         </div>
       </div>
     </section>
 
-    <section class="section structure-preview">
-      <div class="container structure-grid">
+        <section class="section section-muted" style="padding: 40px 0;">
+      <div class="container structure-grid" style="background: #1E2022; border-radius: 24px; padding: 48px; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
         <div class="structure-visual">
           <div class="image-placeholder" data-bg style="background-image: url('/assets/fabrica/nesting-pecas-cortadas.webp');">
             <span>Conheça a Estrutura</span>
@@ -132,29 +157,27 @@
         </div>
 
         <div class="structure-content">
-          <span class="eyebrow">Visitação</span>
-          <h2>Conheça nossa estrutura.</h2>
-          <p>
-            Arquitetos e parceiros podem visitar nossa operação mediante agendamento para conhecer
-            melhor os processos e a capacidade produtiva da empresa.
+          <span class="eyebrow" style="display: inline-flex !important; align-items: center !important; font-size: 0.76rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.14em !important; padding: 6px 16px !important; border-radius: 9999px !important; margin-bottom: 16px !important; color: #D6AB78 !important; background-color: rgba(214, 171, 120, 0.15) !important; border: 1px solid rgba(214, 171, 120, 0.4) !important;">Visitação</span>
+          <h2 style="color: #FFFFFF !important; font-size: 2rem; margin-bottom: 16px; line-height: 1.2;">Conheça nossa estrutura.</h2>
+          <p style="color: #CBD5E1 !important; font-size: 0.98rem; line-height: 1.6; margin-bottom: 24px;">
+            Arquitetos e parceiros podem visitar nossa operação mediante agendamento prévio para conhecer de perto o parque de usinagem CNC e a montagem de protótipos.
           </p>
 
-          <a class="btn btn-primary" href="https://wa.me/5583998586796?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto." target="_blank" rel="noopener">Agendar Visita</a>
+          <a class="btn btn-primary" href="contato.html" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; padding: 13px 26px !important; line-height: 1 !important;">Agendar Visita Técnica</a>
         </div>
       </div>
     </section>
 
-    <section class="section final-cta">
-      <div class="container final-cta-box">
-        <span class="eyebrow">Parcerias</span>
-        <h2>Vamos construir bons projetos juntos.</h2>
-        <p>
-          Se você é arquiteto, designer ou especificador e busca uma empresa preparada para executar
-          projetos com organização e precisão, fale com nossa equipe.
+        <section class="section final-cta" style="padding: 40px 0;">
+      <div class="container final-cta-box" style="background: #DAD2C5; border-radius: 24px; padding: 56px 48px; box-shadow: 0 8px 30px rgba(0,0,0,0.03); text-align: center;">
+        <span class="eyebrow" style="display: inline-block; background: rgba(30, 32, 34, 0.08); border: 1px solid rgba(30, 32, 34, 0.2); color: #1E2022 !important; font-weight: 700; letter-spacing: 0.1em; padding: 6px 18px; border-radius: 999px; margin-bottom: 16px;">Parcerias</span>
+        <h2 style="color: #1E2022 !important; font-size: 2.2rem; line-height: 1.25; margin-bottom: 14px;">Vamos construir bons projetos juntos.</h2>
+        <p style="color: #4B5563 !important; font-size: 1.05rem; line-height: 1.6; max-width: 650px; margin: 0 auto 28px auto;">
+          Se você é arquiteto, designer ou especificador e busca uma indústria de precisão preparada para honrar seu projeto, entre em contato com nossa equipe técnica.
         </p>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/5583998586796?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto." target="_blank" rel="noopener">Apresentar Projeto</a>
+        <div class="hero-actions" style="display: flex; justify-content: center;">
+          <a class="btn btn-primary" href="contato.html" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; padding: 14px 36px !important; font-size: 1rem !important; line-height: 1 !important;">Iniciar Parceria</a>
         </div>
       </div>
     </section>

@@ -25,6 +25,87 @@
   <link rel="stylesheet" href="css/components.css?v=1789746345" />
   <link rel="stylesheet" href="css/pages.css?v=1789746345" />
   <link rel="stylesheet" href="css/responsive.css?v=1789746345" />
+
+<style>
+/* CARD DE PROCESSO PRODUTIVO - ALTO CONTRASTE */
+.step-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(45, 45, 45, 0.16) !important;
+  border-radius: 12px !important;
+  padding: 32px 22px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+  text-align: center !important;
+}
+
+.step-card span {
+  display: block !important;
+  color: #9E7332 !important;
+  font-size: 2.3rem !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  margin-bottom: 14px !important;
+}
+
+.step-card h3 {
+  color: #111827 !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 10px !important;
+}
+
+.step-card p {
+  color: #374151 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+}
+
+/* EYEBROW VISIVEL NO FUNDO BEGE */
+.section-heading .eyebrow {
+  background: rgba(45, 45, 45, 0.08) !important;
+  border: 1px solid rgba(45, 45, 45, 0.25) !important;
+  color: #2D2D2D !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+}
+</style>
+
+
+<style>
+/* CARDS DA SECAO PRODUCAO PROPRIA NO BALAO CLARO */
+.prod-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 900px) {
+  .prod-cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .prod-cards-grid { grid-template-columns: 1fr; }
+}
+.prod-cards-grid .info-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(45, 45, 45, 0.12) !important;
+  border-radius: 14px !important;
+  padding: 26px 20px !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04) !important;
+}
+.prod-cards-grid .info-card h3 {
+  color: #1E2022 !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+}
+.prod-cards-grid .info-card p {
+  color: #4B5563 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+</style>
+
 </head>
 
 <body>
@@ -46,37 +127,30 @@
       </div>
     </section>
 
-<div class="section-divider"></div>
 
-    <section class="section section-dark">
-      <div class="container">
-        <div class="section-heading center">
-          <span class="eyebrow">Produção Própria</span>
-
-          <h2>Estrutura produtiva criada para garantir mais precisão e controle.</h2>
-
-          <p  style="color: #F8FAFC !important; opacity: 0.95 !important;">
-            A qualidade de um projeto não depende apenas do desenho.
-            Ela depende da capacidade de transformar especificações em execução consistente.
+        <section class="section" style="padding: 40px 0;">
+      <div class="container" style="background: #DAD2C5; border-radius: 24px; padding: 56px 48px; box-shadow: 0 8px 30px rgba(0,0,0,0.03);">
+        <div class="section-heading center" style="text-align: center; margin-bottom: 40px;">
+          <span class="eyebrow" style="display: inline-block; background: rgba(30, 32, 34, 0.08); border: 1px solid rgba(30, 32, 34, 0.2); color: #1E2022 !important; font-weight: 700; letter-spacing: 0.1em; padding: 6px 18px; border-radius: 999px; margin-bottom: 16px;">Produção Própria</span>
+          <h2 style="color: #1E2022 !important; font-size: 2.2rem; line-height: 1.2; margin-bottom: 14px;">Estrutura produtiva criada para garantir mais precisão e controle.</h2>
+          <p style="color: #374151 !important; font-size: 1.05rem; line-height: 1.6; max-width: 720px; margin: 0 auto;">
+            A qualidade de um projeto não depende apenas do desenho. Ela depende da capacidade de transformar especificações em execução consistente.
           </p>
         </div>
 
-        <div class="cards-grid">
+        <div class="prod-cards-grid">
           <article class="info-card">
             <h3>Precisão</h3>
             <p>Processos produtivos organizados para reduzir variações durante a fabricação.</p>
           </article>
-
           <article class="info-card">
             <h3>Controle</h3>
             <p>Acompanhamento da produção com foco em qualidade e conformidade.</p>
           </article>
-
           <article class="info-card">
             <h3>Tecnologia</h3>
             <p>Equipamentos e métodos produtivos voltados para eficiência e acabamento.</p>
           </article>
-
           <article class="info-card">
             <h3>Qualidade</h3>
             <p>Compromisso com a execução correta de cada etapa do projeto.</p>
@@ -85,8 +159,8 @@
       </div>
     </section>
 
-    <section class="section structure-preview">
-      <div class="container structure-grid">
+        <section class="section section-muted" style="padding: 40px 0;">
+      <div class="container structure-grid" style="background: #1E2022; border-radius: 24px; padding: 48px; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
         <div class="structure-visual">
           <div class="image-placeholder" data-bg style="background-image: url('/assets/fabrica/seccionadora-giben-digital.webp');">
             <span>Tecnologia e Produção</span>
@@ -94,89 +168,61 @@
         </div>
 
         <div class="structure-content">
-          <span class="eyebrow">Produção própria</span>
-          <h2>Mais controle sobre aquilo que será entregue.</h2>
-          <p>
-            A produção própria permite acompanhar de perto cada etapa da fabricação
-            e manter maior controle sobre os padrões de qualidade definidos para cada projeto.
+          <span class="eyebrow" style="display: inline-flex !important; align-items: center !important; font-size: 0.76rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.14em !important; padding: 6px 16px !important; border-radius: 9999px !important; margin-bottom: 16px !important; color: #D6AB78 !important; background-color: rgba(214, 171, 120, 0.15) !important; border: 1px solid rgba(214, 171, 120, 0.4) !important;">Produção própria</span>
+          <h2 style="color: #FFFFFF !important; font-size: 2rem; margin-bottom: 16px; line-height: 1.2;">Mais controle sobre aquilo que será entregue.</h2>
+          <p style="color: #CBD5E1 !important; font-size: 0.98rem; line-height: 1.6; margin-bottom: 24px;">
+            A produção própria permite acompanhar de perto cada etapa da fabricação e manter maior controle sobre os padrões de qualidade definidos para cada projeto.
           </p>
 
-          <a class="btn btn-primary" href="https://wa.me/5583998586796?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto." target="_blank" rel="noopener">Solicitar Orçamento</a>
+          <a class="btn btn-primary" href="contato.html"   style="display: inline-flex !important; align-items: center !important; justify-content: center !important; padding: 13px 26px !important; line-height: 1 !important;">Solicitar Orçamento</a>
         </div>
       </div>
     </section>
 
-    <section class="section section-muted">
-      <div class="container section-grid">
-        <div>
-          <span class="eyebrow">Precisão produtiva</span>
-          <h2>Cada detalhe importa.</h2>
+    <section class="section" style="padding: 40px 0 80px 0;">
+      <div class="container" style="background: #DAD2C5; border-radius: 24px; padding: 56px 40px; box-shadow: 0 8px 30px rgba(0,0,0,0.03);">
+        <div class="section-heading center" style="text-align: center; margin-bottom: 40px;">
+          <span class="eyebrow" style="display: inline-block; background: rgba(30, 32, 34, 0.08); border: 1px solid rgba(30, 32, 34, 0.2); color: #1E2022 !important; font-weight: 700; letter-spacing: 0.1em; padding: 6px 18px; border-radius: 999px; margin-bottom: 12px;">Processo produtivo</span>
+          <h2 style="color: #1E2022; font-size: 2rem; margin: 0;">Qualidade construída etapa por etapa.</h2>
         </div>
 
-        <div class="section-text">
-          <p>
-            A tecnologia utilizada na produção existe para gerar benefícios reais ao cliente.
-          </p>
+        <div class="steps-grid production-steps" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+          <article class="step-card" style="background: #FAF8F5 !important; border: 1px solid rgba(30, 32, 34, 0.12) !important; border-radius: 14px; padding: 32px 20px; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.03);">
+            <span style="display: block; color: #B38646 !important; font-size: 2.2rem; font-weight: 800; margin-bottom: 12px;">01</span>
+            <h3 style="color: #1E2022 !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 10px;">Projeto Técnico</h3>
+            <p style="color: #4A4E54 !important; font-size: 0.9rem; line-height: 1.5; margin: 0;">Transformação das informações aprovadas em especificações de produção.</p>
+          </article>
 
-          <ul class="feature-list dark-list">
-            <li>Mais precisão nos cortes</li>
-            <li>Melhor encaixe entre componentes</li>
-            <li>Maior consistência no acabamento</li>
-            <li>Menor margem para falhas</li>
-          </ul>
+          <article class="step-card" style="background: #FAF8F5 !important; border: 1px solid rgba(30, 32, 34, 0.12) !important; border-radius: 14px; padding: 32px 20px; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.03);">
+            <span style="display: block; color: #B38646 !important; font-size: 2.2rem; font-weight: 800; margin-bottom: 12px;">02</span>
+            <h3 style="color: #1E2022 !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 10px;">Produção</h3>
+            <p style="color: #4A4E54 !important; font-size: 0.9rem; line-height: 1.5; margin: 0;">Fabricação das peças conforme projeto aprovado.</p>
+          </article>
+
+          <article class="step-card" style="background: #FAF8F5 !important; border: 1px solid rgba(30, 32, 34, 0.12) !important; border-radius: 14px; padding: 32px 20px; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.03);">
+            <span style="display: block; color: #B38646 !important; font-size: 2.2rem; font-weight: 800; margin-bottom: 12px;">03</span>
+            <h3 style="color: #1E2022 !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 10px;">Acabamento</h3>
+            <p style="color: #4A4E54 !important; font-size: 0.9rem; line-height: 1.5; margin: 0;">Conferência e preparação para montagem.</p>
+          </article>
+
+          <article class="step-card" style="background: #FAF8F5 !important; border: 1px solid rgba(30, 32, 34, 0.12) !important; border-radius: 14px; padding: 32px 20px; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.03);">
+            <span style="display: block; color: #B38646 !important; font-size: 2.2rem; font-weight: 800; margin-bottom: 12px;">04</span>
+            <h3 style="color: #1E2022 !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 10px;">Montagem</h3>
+            <p style="color: #4A4E54 !important; font-size: 0.9rem; line-height: 1.5; margin: 0;">Execução final no ambiente do cliente.</p>
+          </article>
         </div>
-      </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Processo produtivo</span>
-          <h2>Qualidade construída etapa por etapa.</h2>
+    
+        <section class="section section-muted" style="padding: 40px 0;">
+      <div class="container" style="background: #1E2022; border-radius: 24px; padding: 56px 48px; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+        <div style="max-width: 500px;">
+          <span class="eyebrow" style="display: inline-flex !important; align-items: center !important; font-size: 0.76rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.14em !important; padding: 6px 16px !important; border-radius: 9999px !important; margin-bottom: 16px !important; color: #D6AB78 !important; background-color: rgba(214, 171, 120, 0.15) !important; border: 1px solid rgba(214, 171, 120, 0.4) !important;">Equipe & Valor</span>
+          <h2 style="font-size: 2.1rem; line-height: 1.25; margin: 0; color: #FFFFFF !important;">Tecnologia não substitui pessoas. Potencializa pessoas.</h2>
         </div>
-
-        <div class="steps-grid production-steps">
-          <article class="step-card">
-            <span>01</span>
-            <h3>Projeto Técnico</h3>
-            <p>Transformação das informações aprovadas em especificações de produção.</p>
-          </article>
-
-          <article class="step-card">
-            <span>02</span>
-            <h3>Produção</h3>
-            <p>Fabricação das peças conforme projeto aprovado.</p>
-          </article>
-
-          <article class="step-card">
-            <span>03</span>
-            <h3>Acabamento</h3>
-            <p>Conferência e preparação para montagem.</p>
-          </article>
-
-          <article class="step-card">
-            <span>04</span>
-            <h3>Montagem</h3>
-            <p>Execução final no ambiente do cliente.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark">
-      <div class="container section-grid">
-        <div>
-          <span class="eyebrow">Equipe</span>
-          <h2>Tecnologia não substitui pessoas. Potencializa pessoas.</h2>
-        </div>
-
-        <div class="section-text">
-          <p>
-            A tecnologia é uma ferramenta. O resultado depende da experiência,
-            atenção aos detalhes e responsabilidade da equipe envolvida em cada projeto.
-          </p>
-
-          <a href="projetos.html" class="btn btn-light">Conheça nossos projetos</a>
+        <div style="max-width: 520px;">
+          <p style="margin-bottom: 24px; color: #CBD5E1 !important; font-size: 1.05rem; line-height: 1.6;">A tecnologia é uma ferramenta. O resultado depende da experiência, atenção aos detalhes e responsabilidade da equipe envolvida em cada projeto.</p>
+          <a class="btn btn-primary" href="como-funciona.html" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; padding: 13px 26px !important; line-height: 1 !important;">Conheça Nosso Processo</a>
         </div>
       </div>
     </section>
@@ -191,7 +237,7 @@
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/5583998586796?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto." target="_blank" rel="noopener">Solicitar Orçamento</a>
+          <a class="btn btn-primary" href="contato.html"  >Solicitar Orçamento</a>
           <a href="projetos.html" class="btn btn-secondary">Ver Projetos</a>
         </div>
       </div>

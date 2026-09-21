@@ -1731,3 +1731,148 @@ section.hero > .container, section.hero .hero-grid { margin-left: auto !importan
 .hero-card-tag { white-space: nowrap !important; width: fit-content !important; display: inline-block !important; font-size: 0.72rem !important; letter-spacing: 0.14em !important; text-transform: uppercase !important; color: #D6AB78 !important; background: rgba(30, 30, 30, 0.85) !important; border: 1px solid rgba(214, 171, 120, 0.5) !important; padding: 5px 14px !important; border-radius: 9999px !important; margin-bottom: 12px !important; font-weight: 600 !important; }
 .hero-card-overlay p { font-family: var(--font-title, serif) !important; font-size: 1.6rem !important; line-height: 1.2 !important; color: #FFFFFF !important; margin: 0 0 6px 0 !important; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important; }
 .hero-card-overlay .hero-card-sub { display: block !important; font-family: var(--font-body, sans-serif) !important; font-size: 0.95rem !important; font-weight: 300 !important; color: #E2E8F0 !important; line-height: 1.4 !important; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9) !important; }
+
+/* ========================================================
+   ESTILOS DO FORMULÁRIO DE TRIAGEM INTERATIVA (QUIZ)
+   ======================================================== */
+.quiz-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.quiz-progress-fill {
+  height: 100%;
+  background: #D6AB78;
+  transition: width 0.3s ease;
+}
+
+.quiz-step-counter {
+  font-size: 0.85rem;
+  color: #D6AB78;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.2rem;
+}
+
+.quiz-label {
+  display: block;
+  font-size: 0.95rem;
+  color: #E2E8F0;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.quiz-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.quiz-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #F8FAFC;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1.3;
+}
+
+.quiz-btn:hover {
+  border-color: #D6AB78;
+  background: rgba(214, 171, 120, 0.08);
+}
+
+.quiz-btn.selected {
+  background: rgba(214, 171, 120, 0.18) !important;
+  border-color: #D6AB78 !important;
+  color: #D6AB78 !important;
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(214, 171, 120, 0.2);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #CBD5E1;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFF;
+}
+
+/* ========================================================
+   ESTILOS DO FORMULÁRIO DE TRIAGEM INTERATIVA (QUIZ)
+   ======================================================== */
+.quiz-progress-bar { width: 100%; height: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 999px; overflow: hidden; margin-bottom: 8px; }
+.quiz-progress-fill { height: 100%; background: #D6AB78; transition: width 0.3s ease; }
+.quiz-step-counter { font-size: 0.85rem; color: #D6AB78; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.2rem; }
+.quiz-label { display: block; font-size: 0.95rem; color: #E2E8F0; font-weight: 600; margin-bottom: 8px; }
+.quiz-options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 12px; }
+.quiz-btn { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.15); color: #F8FAFC; padding: 12px 14px; border-radius: 8px; font-size: 0.88rem; text-align: center; cursor: pointer; transition: all 0.2s ease; line-height: 1.3; }
+.quiz-btn:hover { border-color: #D6AB78; background: rgba(214, 171, 120, 0.08); }
+.btn-secondary { background: transparent; border: 1px solid rgba(255, 255, 255, 0.2); color: #CBD5E1; padding: 12px 20px; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+.btn-secondary:hover { background: rgba(255, 255, 255, 0.05); color: #FFF; }
+.quiz-progress-bar { width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 999px; overflow: hidden; margin-bottom: 8px; }
+.quiz-progress-fill { height: 100%; background: #D6AB78; transition: width 0.3s ease; }
+.quiz-step-counter { font-size: 0.85rem; color: #D6AB78; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.2rem; }
+.quiz-label { display: block; font-size: 0.95rem; color: #E2E8F0; font-weight: 600; margin-bottom: 8px; }
+.quiz-options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 12px; }
+.quiz-btn { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.15); color: #F8FAFC; padding: 12px 14px; border-radius: 8px; font-size: 0.88rem; text-align: center; cursor: pointer; transition: all 0.2s ease; line-height: 1.3; }
+.quiz-btn:hover { border-color: #D6AB78; background: rgba(214,171,120,0.08); }
+.quiz-btn.selected { background: rgba(214,171,120,0.18) !important; border-color: #D6AB78 !important; color: #D6AB78 !important; font-weight: 600; box-shadow: 0 0 12px rgba(214,171,120,0.2); }
+.btn-secondary { background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #CBD5E1; padding: 12px 20px; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+.btn-secondary:hover { background: rgba(255,255,255,0.05); color: #FFF; }
+
+/* AJUSTE DE CONTRASTE - PROCESSO PRODUTIVO */
+.production-steps .step-card {
+  background: #FAF8F5 !important;
+  border: 1px solid rgba(45, 45, 45, 0.12) !important;
+  border-radius: 12px !important;
+  padding: 32px 24px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.production-steps .step-card:hover {
+  transform: translateY(-2px);
+  border-color: #C5A265 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+.production-steps .step-card span {
+  color: #B38646 !important;
+  font-size: 2.2rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px !important;
+  opacity: 1 !important;
+}
+
+.production-steps .step-card h3 {
+  color: #1A1D20 !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 10px !important;
+}
+
+.production-steps .step-card p {
+  color: #4A4E54 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}

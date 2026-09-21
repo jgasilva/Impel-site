@@ -25,6 +25,122 @@
   <link rel="stylesheet" href="css/components.css?v=1789746345" />
   <link rel="stylesheet" href="css/pages.css?v=1789746345" />
   <link rel="stylesheet" href="css/responsive.css?v=1789746345" />
+
+<style>
+/* CORREÇÃO DE CONTRASTE DOS STAT CARDS */
+.stats-grid .stat-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(45, 45, 45, 0.12) !important;
+  border-radius: 14px !important;
+  padding: 28px 22px !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06) !important;
+}
+.stats-grid .stat-card h3 {
+  color: #1E2022 !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+}
+.stats-grid .stat-card p {
+  color: #4B5563 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+</style>
+
+
+<style>
+/* CARDS DAS ETAPAS NO FUNDO CLARO */
+.steps-grid .step-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(45, 45, 45, 0.12) !important;
+  border-radius: 12px !important;
+  padding: 24px 16px !important;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.04) !important;
+}
+.steps-grid .step-card span {
+  color: #B38646 !important;
+  font-weight: 800 !important;
+  font-size: 1.6rem !important;
+}
+.steps-grid .step-card h3 {
+  color: #1E2022 !important;
+  font-weight: 700 !important;
+}
+
+/* CARDS DE SOLUÇÕES NO BALÃO ESCURO */
+.section-muted .cards-grid .info-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 14px !important;
+  padding: 32px 28px !important;
+}
+.section-muted .cards-grid .info-card h3 {
+  color: #FFFFFF !important;
+  font-size: 1.25rem !important;
+  margin-bottom: 10px !important;
+}
+.section-muted .cards-grid .info-card p {
+  color: #CBD5E1 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+}
+.section-muted .cards-grid .info-card .text-link {
+  color: #D6AB78 !important;
+  font-weight: 600 !important;
+  display: inline-block !important;
+  margin-top: 14px !important;
+}
+</style>
+
+
+<style>
+/* CORREÇÕES GLOBAIS HOME */
+.projects-preview {
+  background: transparent !important;
+}
+.section-muted .section-heading h2 {
+  color: #FFFFFF !important;
+}
+.section-muted .section-heading p {
+  color: #CBD5E1 !important;
+}
+.projects-grid .project-card {
+  background: #25282C !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+.projects-grid .project-card h3 {
+  color: #FFFFFF !important;
+  padding: 18px 20px 6px 20px !important;
+  margin: 0 !important;
+  font-size: 1.15rem !important;
+}
+.projects-grid .project-card p {
+  color: #94A3B8 !important;
+  padding: 0 20px 20px 20px !important;
+  margin: 0 !important;
+  font-size: 0.9rem !important;
+}
+</style>
+
+
+<style>
+/* TRAVA 4x2 NO DESKTOP E AJUSTA EM TELAS MENORES */
+@media (max-width: 900px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 480px) {
+  .steps-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -39,7 +155,7 @@
           <p class="hero-description">A IMPEL une produção própria, tecnologia e atendimento personalizado para transformar projetos residenciais e corporativos em ambientes planejados com mais segurança e previsibilidade.</p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/5583998586796?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto." target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-primary" href="contato.html"  >Solicitar Orçamento</a>
           </div>
         </div>
 
@@ -55,22 +171,26 @@
     </section>
 
 
-    <section class="section section-muted">
-      <div class="container section-grid">
+    <section class="section" style="padding: 40px 0;">
+      <div class="container section-grid" style="background: #DAD2C5; border-radius: 24px; padding: 56px 48px; box-shadow: 0 8px 30px rgba(0,0,0,0.03); align-items: center; gap: 48px;">
         <div>
-          <span class="eyebrow" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; font-size: 0.76rem !important; font-weight: 600 !important; text-transform: uppercase !important; letter-spacing: 0.14em !important; padding: 6px 16px !important; border-radius: 9999px !important; margin-bottom: 16px !important; line-height: 1 !important; color: #D6AB78 !important; background-color: rgba(214, 171, 120, 0.15) !important; border: 1px solid rgba(214, 171, 120, 0.45) !important; opacity: 1 !important; visibility: visible !important; white-space: nowrap !important;">Quem é a IMPEL</span>
-          <h2>Mais do que móveis planejados. Uma estrutura preparada para executar bem.</h2>
+          <span class="eyebrow" style="display: inline-block; background: rgba(30, 32, 34, 0.08); border: 1px solid rgba(30, 32, 34, 0.2); color: #1E2022 !important; font-weight: 700; letter-spacing: 0.1em; padding: 6px 18px; border-radius: 999px; margin-bottom: 18px;">Quem é a IMPEL</span>
+          <h2 style="color: #1E2022 !important; font-size: 2.3rem; line-height: 1.2; margin: 0 0 16px 0;">Mais do que móveis planejados. Uma estrutura preparada para executar bem.</h2>
         </div>
 
         <div class="section-text">
-          <p>A IMPEL nasceu da convicção de que projetos importantes exigem mais do que boas ideias. Exigem estrutura.</p>
-          <p>Por isso, unimos atendimento personalizado, produção própria e organização de processo para oferecer uma experiência mais segura do início ao fim.</p>
-          <a href="a-impel.html" class="text-link">Conheça a IMPEL</a>
+          <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 16px; color: #1E2022 !important; font-weight: 500;">
+            A IMPEL nasceu da convicção de que projetos importantes exigem mais do que boas ideias. Exigem estrutura.
+          </p>
+          <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px; color: #374151 !important;">
+            Por isso, unimos atendimento personalizado, produção própria e organização de processo para oferecer uma experiência mais segura do início ao fim.
+          </p>
+          <a href="a-impel.html" class="btn btn-primary" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; padding: 12px 26px !important; line-height: 1 !important;">Conheça a IMPEL</a>
         </div>
       </div>
     </section>
 
-    <section class="stats-section">
+    <section class="section section-muted stats-section">
       <div class="container">
         <div class="section-heading center">
           <span class="eyebrow">Diferenciais</span>
@@ -101,8 +221,8 @@
       </div>
     </section>
 
-    <section class="section section-muted structure-preview">
-      <div class="container structure-grid">
+    <section class="section" style="padding: 40px 0;">
+      <div class="container structure-grid" style="background: #DAD2C5; border-radius: 24px; padding: 48px; box-shadow: 0 8px 30px rgba(0,0,0,0.03);">
         <div class="structure-visual">
           <div class="image-placeholder" data-bg style="background-image: url('/assets/fabrica/cnc-operacao-impel.webp');">
             <span>Fábrica Própria</span>
@@ -110,50 +230,54 @@
         </div>
 
         <div class="structure-content">
-          <span class="eyebrow" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; font-size: 0.76rem !important; font-weight: 600 !important; text-transform: uppercase !important; letter-spacing: 0.14em !important; padding: 6px 16px !important; border-radius: 9999px !important; margin-bottom: 16px !important; line-height: 1 !important; color: #D6AB78 !important; background-color: rgba(214, 171, 120, 0.15) !important; border: 1px solid rgba(214, 171, 120, 0.45) !important; opacity: 1 !important; visibility: visible !important; white-space: nowrap !important;">Transparência</span>
-          <h2>Conheça de perto onde seu projeto é produzido.</h2>
-          <p style="color: #F1F5F9 !important; font-size: 1.05rem; line-height: 1.6; opacity: 0.95;">Acreditamos que transparência gera confiança. Por isso, a estrutura produtiva da IMPEL é parte fundamental da experiência oferecida ao cliente.</p>
-          <p style="color: #F1F5F9 !important; font-size: 1.05rem; line-height: 1.6; opacity: 0.95;">Produção própria, processos organizados e acompanhamento técnico ajudam a transformar projetos em ambientes executados com mais segurança.</p>
+          <span class="eyebrow" style="display: inline-block; background: rgba(30, 32, 34, 0.08); border: 1px solid rgba(30, 32, 34, 0.2); color: #1E2022 !important; font-weight: 700; letter-spacing: 0.1em; padding: 6px 16px; border-radius: 999px; margin-bottom: 16px;">Produção própria</span>
+          <h2 style="color: #1E2022 !important; font-size: 2rem; margin-bottom: 16px; line-height: 1.2;">Conheça de perto onde seu projeto é produzido.</h2>
+          <p style="color: #374151 !important; font-size: 0.95rem; line-height: 1.6; margin-bottom: 12px;">
+            A IMPEL conta com fábrica própria e maquinário de alta precisão para garantir esquadro perfeito, acabamento refinado e respeito aos padrões acordados.
+          </p>
+          <p style="color: #4B5563 !important; font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">
+            Essa estrutura própria nos dá controle total sobre os prazos e a qualidade da entrega.
+          </p>
 
-          <a href="tecnologia-e-producao.html" class="btn btn-primary">Conheça Nossa Estrutura</a>
+          <a class="btn btn-primary" href="tecnologia-e-producao.html" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; padding: 12px 26px !important; line-height: 1 !important;">Conhecer a Produção</a>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Soluções</span>
-          <h2>Projetos sob medida para diferentes necessidades.</h2>
-          <p>Atendemos ambientes residenciais e corporativos com soluções planejadas para unir estética, funcionalidade e durabilidade.</p>
+        <section class="section section-muted" style="padding: 40px 0;">
+      <div class="container" style="background: #1E2022; border-radius: 24px; padding: 56px 48px; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+        <div class="section-heading" style="margin-bottom: 36px;">
+          <span class="eyebrow" style="display: inline-flex !important; align-items: center !important; font-size: 0.76rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.14em !important; padding: 6px 16px !important; border-radius: 9999px !important; margin-bottom: 16px !important; color: #D6AB78 !important; background-color: rgba(214, 171, 120, 0.15) !important; border: 1px solid rgba(214, 171, 120, 0.4) !important;">Soluções</span>
+          <h2 style="color: #FFFFFF !important; font-size: 2.1rem; line-height: 1.25; margin-bottom: 12px;">Projetos sob medida para diferentes necessidades.</h2>
+          <p style="color: #CBD5E1 !important; font-size: 1.05rem; line-height: 1.6; max-width: 700px; margin: 0;">Atendemos ambientes residenciais e corporativos com soluções planejadas para unir estética, funcionalidade e durabilidade.</p>
         </div>
 
         <div class="cards-grid">
-          <article class="info-card">
-            <h3>Residencial</h3>
-            <p>Casas, apartamentos, cozinhas, closets, dormitórios, salas e áreas gourmet.</p>
-            <a href="projetos-residenciais.html" class="text-link">Ver soluções residenciais</a>
+          <article class="info-card" style="background: rgba(255, 255, 255, 0.04) !important; border: 1px solid rgba(255, 255, 255, 0.1) !important; border-radius: 16px !important; padding: 36px 30px !important;">
+            <h3 style="color: #FFFFFF !important; font-size: 1.3rem; margin-bottom: 12px;">Residencial</h3>
+            <p style="color: #94A3B8 !important; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Casas, apartamentos, cozinhas, closets, dormitórios, salas e áreas gourmet.</p>
+            <a href="projetos-residenciais.html" class="btn btn-primary" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 22px; font-size: 0.88rem;">Ver Soluções Residenciais</a>
           </article>
 
-          <article class="info-card">
-            <h3>Corporativo</h3>
-            <p>Clínicas, consultórios, escritórios, recepções e ambientes empresariais.</p>
-            <a href="projetos-corporativos.html" class="text-link">Ver soluções corporativas</a>
+          <article class="info-card" style="background: rgba(255, 255, 255, 0.04) !important; border: 1px solid rgba(255, 255, 255, 0.1) !important; border-radius: 16px !important; padding: 36px 30px !important;">
+            <h3 style="color: #FFFFFF !important; font-size: 1.3rem; margin-bottom: 12px;">Corporativo</h3>
+            <p style="color: #94A3B8 !important; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Clínicas, consultórios, escritórios, recepções e ambientes empresariais.</p>
+            <a href="projetos-corporativos.html" class="btn btn-primary" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 22px; font-size: 0.88rem;">Ver Soluções Corporativas</a>
           </article>
         </div>
       </div>
     </section>
 
 
-    <section class="section section-muted">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Como trabalhamos</span>
-          <h2>Um processo claro para uma entrega mais segura.</h2>
-          <p style="color: #F1F5F9 !important; font-size: 1.08rem; line-height: 1.6; opacity: 0.95;">Organização gera previsibilidade. Por isso, cada projeto segue etapas definidas que ajudam a reduzir riscos e aumentar a confiança durante toda a jornada.</p>
+        <section class="section" style="padding: 40px 0;">
+      <div class="container" style="background: #DAD2C5; border-radius: 24px; padding: 56px 48px; box-shadow: 0 8px 30px rgba(0,0,0,0.03);">
+        <div class="section-heading center" style="text-align: center; margin-bottom: 36px;">
+          <span class="eyebrow" style="display: inline-block; background: rgba(30, 32, 34, 0.08); border: 1px solid rgba(30, 32, 34, 0.2); color: #1E2022 !important; font-weight: 700; letter-spacing: 0.1em; padding: 6px 18px; border-radius: 999px; margin-bottom: 16px;">Como trabalhamos</span>
+          <h2 style="color: #1E2022 !important; font-size: 2.1rem; line-height: 1.25; margin-bottom: 12px;">Um processo claro para uma entrega mais segura.</h2>
+          <p style="color: #4B5563 !important; font-size: 1.05rem; line-height: 1.6; max-width: 650px; margin: 0 auto;">Organização gera previsibilidade. Por isso, cada projeto segue etapas definidas que ajudam a reduzir riscos e aumentar a confiança durante toda a jornada.</p>
         </div>
 
-        <div class="steps-grid">
+        <div class="steps-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 36px;">
           <article class="step-card"><span>01</span><h3>Atendimento</h3></article>
           <article class="step-card"><span>02</span><h3>Levantamento</h3></article>
           <article class="step-card"><span>03</span><h3>Projeto</h3></article>
@@ -164,18 +288,18 @@
           <article class="step-card"><span>08</span><h3>Pós-venda</h3></article>
         </div>
 
-        <div class="center-action">
-          <a href="como-funciona.html" class="btn btn-primary">Entenda Como Funciona</a>
+        <div class="center-action" style="text-align: center;">
+          <a href="como-funciona.html" class="btn btn-primary" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; padding: 14px 28px !important; line-height: 1 !important; text-align: center !important;">Entenda Como Funciona</a>
         </div>
       </div>
     </section>
 
-    <section class="section projects-preview">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; font-size: 0.76rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.14em !important; padding: 6px 16px !important; border-radius: 9999px !important; margin-bottom: 16px !important; line-height: 1 !important; color: #2D2D2D !important; background-color: rgba(45, 45, 45, 0.08) !important; border: 1.5px solid rgba(45, 45, 45, 0.35) !important; opacity: 1 !important; visibility: visible !important; white-space: nowrap !important;">Projetos</span>
-          <h2>Ambientes planejados para funcionar tão bem quanto aparentam.</h2>
-          <p>Cada projeto representa muito mais do que um ambiente bonito. Representa planejamento, produção, montagem e atenção aos detalhes.</p>
+        <section class="section section-muted" style="padding: 40px 0;">
+      <div class="container" style="background: #1E2022; border-radius: 24px; padding: 56px 48px; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+        <div class="section-heading center" style="text-align: center; margin-bottom: 36px;">
+          <span class="eyebrow" style="display: inline-flex !important; align-items: center !important; font-size: 0.76rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.14em !important; padding: 6px 16px !important; border-radius: 9999px !important; margin-bottom: 16px !important; color: #D6AB78 !important; background-color: rgba(214, 171, 120, 0.15) !important; border: 1px solid rgba(214, 171, 120, 0.4) !important;">Projetos</span>
+          <h2 style="color: #FFFFFF !important; font-size: 2.1rem; line-height: 1.25; margin-bottom: 12px;">Ambientes planejados para funcionar tão bem quanto aparentam.</h2>
+          <p style="color: #CBD5E1 !important; font-size: 1.05rem; line-height: 1.6; max-width: 650px; margin: 0 auto;">Cada projeto representa muito mais do que um ambiente bonito. Representa planejamento, produção, montagem e atenção aos detalhes.</p>
         </div>
 
         <div class="projects-grid">
@@ -198,8 +322,8 @@
           </article>
         </div>
 
-        <div class="center-action">
-          <a href="projetos.html" class="btn btn-primary">Ver Todos os Projetos</a>
+        <div class="center-action" style="text-align: center; margin-top: 36px;">
+          <a href="projetos.html" class="btn btn-primary" style="display: inline-flex; align-items: center; justify-content: center; padding: 13px 28px;">Ver Todos os Projetos</a>
         </div>
       </div>
     </section>
@@ -211,7 +335,7 @@
         <p>Se você procura móveis planejados de alto padrão e valoriza estrutura, organização e qualidade de execução, nossa equipe está pronta para atender você.</p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/5583998586796?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto." target="_blank" rel="noopener">Solicitar Orçamento</a>
+          <a class="btn btn-primary" href="contato.html"  >Solicitar Orçamento</a>
           
         </div>
       </div>

@@ -25,6 +25,121 @@
   <link rel="stylesheet" href="css/components.css?v=1789746345" />
   <link rel="stylesheet" href="css/pages.css?v=1789746345" />
   <link rel="stylesheet" href="css/responsive.css?v=1789746345" />
+
+
+
+
+
+
+
+<style id="custom-portfolio-style">
+/* FILTROS DINAMICOS */
+.project-filter {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin: 0 auto 40px auto !important;
+  flex-wrap: wrap !important;
+}
+.filter-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px 24px !important;
+  border-radius: 999px !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  border: 1px solid rgba(30, 32, 34, 0.2) !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  color: #1E2022 !important;
+  transition: all 0.25s ease !important;
+  outline: none !important;
+}
+.filter-btn:hover {
+  background: #FFFFFF !important;
+  border-color: #1E2022 !important;
+}
+.filter-btn.active {
+  background: #1E2022 !important;
+  color: #FFFFFF !important;
+  border-color: #1E2022 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+/* CARDS DO PORTFOLIO */
+.portfolio-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 28px !important;
+}
+@media (max-width: 900px) {
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 600px) {
+  .portfolio-grid { grid-template-columns: 1fr !important; }
+}
+
+.portfolio-card {
+  background: #FFFFFF !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(30, 32, 34, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  transition: transform 0.25s ease, opacity 0.3s ease !important;
+}
+.portfolio-card.hidden {
+  display: none !important;
+}
+
+.portfolio-card .portfolio-image {
+  width: 100% !important;
+  height: 250px !important;
+  background: transparent !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.portfolio-card .portfolio-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+.portfolio-card .portfolio-content {
+  padding: 24px 22px !important;
+  background: #FFFFFF !important;
+  flex-grow: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.portfolio-card .portfolio-content span {
+  display: inline-block !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  color: #B38646 !important;
+  margin-bottom: 8px !important;
+}
+.portfolio-card .portfolio-content h3 {
+  color: #1E2022 !important;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  margin: 0 0 10px 0 !important;
+}
+.portfolio-card .portfolio-content p {
+  color: #4B5563 !important;
+  font-size: 0.92rem !important;
+  line-height: 1.55 !important;
+  margin: 0 !important;
+}
+</style>
+
 </head>
 
 <body>
@@ -42,93 +157,172 @@
       </div>
     </section>
 
-    <section class="section section-muted">
-      <div class="container">
-        <div class="project-filter">
-          <a href="projetos.html" class="filter-pill active">Todos</a>
-          <a href="projetos-residenciais.html" class="filter-pill">Residencial</a>
-          <a href="projetos-corporativos.html" class="filter-pill">Corporativo</a>
-        </div>
-
-        <div class="section-heading">
-          <span class="eyebrow">Portfólio</span>
-          <h2>Observe os detalhes, os encaixes e os acabamentos.</h2>
-          <p  style="color: #F8FAFC !important; opacity: 0.95 !important;">
+            <section class="section" style="padding: 40px 0;">
+      <div class="container" style="background: #DAD2C5; border-radius: 24px; padding: 56px 48px; box-shadow: 0 8px 30px rgba(0,0,0,0.03);">
+        <div class="section-heading center" style="text-align: center; margin-bottom: 32px;">
+          <span class="eyebrow" style="display: inline-block; background: rgba(30, 32, 34, 0.08); border: 1px solid rgba(30, 32, 34, 0.2); color: #1E2022 !important; font-weight: 700; letter-spacing: 0.1em; padding: 6px 18px; border-radius: 999px; margin-bottom: 16px;">Portfólio</span>
+          <h2 style="color: #1E2022 !important; font-size: 2.2rem; line-height: 1.2; margin-bottom: 12px;">Observe os detalhes, os encaixes e os acabamentos.</h2>
+          <p style="color: #374151 !important; font-size: 1.05rem; line-height: 1.6; max-width: 720px; margin: 0 auto;">
             São esses elementos que transformam um projeto em um ambiente bem executado.
           </p>
         </div>
 
-        <div class="portfolio-grid">
-          <article class="portfolio-card">
+        <div class="project-filter">
+          <button type="button" class="filter-btn active" data-filter="all">Todos</button>
+          <button type="button" class="filter-btn" data-filter="residencial">Residencial</button>
+          <button type="button" class="filter-btn" data-filter="corporativo">Corporativo</button>
+        </div>
+
+                <div class="portfolio-grid">
+          <!-- RESIDENCIAIS (8 PROJETOS) -->
+          <article class="portfolio-card" data-category="residencial">
             <div class="portfolio-image"><img src="assets/projetos/res-cozinha-ilha-madeira.webp" alt="Cozinhas Planejadas" loading="lazy"></div>
             <div class="portfolio-content">
               <span>Residencial</span>
-              <h3>Cozinhas Planejadas</h3>
-              <p>Soluções pensadas para rotina, organização e aproveitamento inteligente do espaço.</p>
+              <h3>Cozinhas</h3>
+              <p>Soluções desenvolvidas para máxima eficiência, ergonomia e acabamentos de alto padrão.</p>
             </div>
           </article>
 
-          <article class="portfolio-card">
-            <div class="portfolio-image"><img src="assets/projetos/res-closet-master.webp" alt="Closets e Dormitórios" loading="lazy"></div>
+          <article class="portfolio-card" data-category="residencial">
+            <div class="portfolio-image"><img src="assets/projetos/res-cozinha-linear.webp" alt="Closets sob medida" loading="lazy"></div>
             <div class="portfolio-content">
               <span>Residencial</span>
-              <h3>Closets e Dormitórios</h3>
-              <p>Ambientes desenvolvidos para conforto, funcionalidade e elegância.</p>
+              <h3>Closets</h3>
+              <p>Planejamento inteligente de compartimentos, iluminação embutida e organização refinada.</p>
             </div>
           </article>
 
-          <article class="portfolio-card">
-            <div class="portfolio-image"><img src="assets/projetos/corp-recepcao.webp" alt="Projetos Corporativos" loading="lazy"></div>
-            <div class="portfolio-content">
-              <span>Corporativo</span>
-              <h3>Clínicas e Consultórios</h3>
-              <p>Projetos planejados para acolhimento, organização e imagem profissional.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-card">
-            <div class="portfolio-image"><img src="assets/projetos/res-living-painel.webp" alt="Salas e Home Theater" loading="lazy"></div>
+          <article class="portfolio-card" data-category="residencial">
+            <div class="portfolio-image"><img src="assets/projetos/res-cozinha-gourmet.webp" alt="Dormitórios Planejados" loading="lazy"></div>
             <div class="portfolio-content">
               <span>Residencial</span>
-              <h3>Salas e Painéis</h3>
-              <p>Integração entre estética, uso diário e qualidade de execução.</p>
+              <h3>Dormitórios</h3>
+              <p>Ambientes projetados para conforto térmico, isolamento visual e aconchego sob medida.</p>
             </div>
           </article>
 
-          <article class="portfolio-card">
-            <div class="portfolio-image"><img src="assets/projetos/corp-reuniao.webp" alt="Salas de Reunião" loading="lazy"></div>
+          <article class="portfolio-card" data-category="residencial">
+            <div class="portfolio-image"><img src="assets/projetos/res-closet-master.webp" alt="Salas e Livings" loading="lazy"></div>
             <div class="portfolio-content">
-              <span>Corporativo</span>
-              <h3>Escritórios</h3>
-              <p>Soluções para produtividade, organização e apresentação profissional.</p>
+              <span>Residencial</span>
+              <h3>Salas</h3>
+              <p>Composições nobres com painéis ripados, nichos embutidos e integração de ambientes.</p>
             </div>
           </article>
 
-          <article class="portfolio-card">
-            <div class="portfolio-image"><img src="assets/projetos/res-cozinha-gourmet.webp" alt="Áreas Gourmet" loading="lazy"></div>
+          <article class="portfolio-card" data-category="residencial">
+            <div class="portfolio-image"><img src="assets/projetos/res-dormitorio-casal.webp" alt="Áreas Gourmet" loading="lazy"></div>
             <div class="portfolio-content">
               <span>Residencial</span>
               <h3>Áreas Gourmet</h3>
-              <p>Ambientes preparados para convivência, funcionalidade e praticidade.</p>
+              <p>Resistência a áreas úmidas, ferragens reforçadas e sofisticação para convivência.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="residencial">
+            <div class="portfolio-image"><img src="assets/projetos/res-dormitorio-solteiro.webp" alt="Banheiros sob medida" loading="lazy"></div>
+            <div class="portfolio-content">
+              <span>Residencial</span>
+              <h3>Banheiros</h3>
+              <p>Marcenaria com proteção hidrófuga, puxadores usinados e encaixes milimétricos.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="residencial">
+            <div class="portfolio-image"><img src="assets/projetos/res-living-painel.webp" alt="Apartamentos Completos" loading="lazy"></div>
+            <div class="portfolio-content">
+              <span>Residencial</span>
+              <h3>Apartamentos Completos</h3>
+              <p>Execução completa de ponta a ponta respeitando fielmente as especificações de arquitetura.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="residencial">
+            <div class="portfolio-image"><img src="assets/projetos/res-lavabo-luxo.webp" alt="Casas e Mansões" loading="lazy"></div>
+            <div class="portfolio-content">
+              <span>Residencial</span>
+              <h3>Casas</h3>
+              <p>Projetos de grande porte com precisão de corte CNC e controle total de lote e veios.</p>
+            </div>
+          </article>
+
+          <!-- CORPORATIVOS (6 PROJETOS) -->
+          <article class="portfolio-card" data-category="corporativo">
+            <div class="portfolio-image"><img src="assets/projetos/corp-recepcao.webp" alt="Clínicas e Consultórios" loading="lazy"></div>
+            <div class="portfolio-content">
+              <span>Corporativo</span>
+              <h3>Clínicas</h3>
+              <p>Mobiliário em conformidade sanitária, funcionalidade médica e recepções de impacto visual.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="corporativo">
+            <div class="portfolio-image"><img src="assets/projetos/corp-reuniao.webp" alt="Consultórios Executivos" loading="lazy"></div>
+            <div class="portfolio-content">
+              <span>Corporativo</span>
+              <h3>Consultórios</h3>
+              <p>Design sóbrio e profissional com atenuação acústica e estações de trabalho eficientes.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="corporativo">
+            <div class="portfolio-image"><img src="assets/projetos/corp-diretoria.webp" alt="Recepções Corporativas" loading="lazy"></div>
+            <div class="portfolio-content">
+              <span>Corporativo</span>
+              <h3>Recepções</h3>
+              <p>Balcões imponentes com iluminação perimetral e revestimentos especiais de alta durabilidade.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="corporativo">
+            <div class="portfolio-image"><img src="assets/projetos/corp-open-space.webp" alt="Escritórios e Open Space" loading="lazy"></div>
+            <div class="portfolio-content">
+              <span>Corporativo</span>
+              <h3>Escritórios</h3>
+              <p>Organização de cabeamento estruturado, divisórias em marcenaria e padronização corporativa.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="corporativo">
+            <div class="portfolio-image"><img src="assets/projetos/corp-consultorio.webp" alt="Salas Comerciais" loading="lazy"></div>
+            <div class="portfolio-content">
+              <span>Corporativo</span>
+              <h3>Salas Comerciais</h3>
+              <p>Otimização rigorosa da metragem quadrada com armários integrados e linhas contemporâneas.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="corporativo">
+            <div class="portfolio-image"><img src="assets/projetos/corp-descompressao.webp" alt="Projetos Personalizados Corporativos" loading="lazy"></div>
+            <div class="portfolio-content">
+              <span>Corporativo</span>
+              <h3>Projetos Personalizados</h3>
+              <p>Soluções não convencionais de engenharia e marcenaria para demandas empresariais complexas.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section final-cta">
-      <div class="container final-cta-box">
-        <span class="eyebrow">Gostou de algum projeto?</span>
-        <h2>Vamos conversar sobre o seu.</h2>
-        <p>
-          Se você procura uma empresa estruturada para executar seu projeto com segurança,
-          nossa equipe está pronta para atender você.
+        <section class="section section-muted" style="padding: 40px 0;">
+      <div class="container final-cta-box" style="background: #1E2022; border-radius: 24px; padding: 56px 48px; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.15); text-align: center;">
+        <span class="eyebrow" style="display: inline-flex !important; align-items: center !important; font-size: 0.76rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.14em !important; padding: 6px 16px !important; border-radius: 9999px !important; margin-bottom: 16px !important; color: #D6AB78 !important; background-color: rgba(214, 171, 120, 0.15) !important; border: 1px solid rgba(214, 171, 120, 0.4) !important;">Gostou de algum projeto?</span>
+        <h2 style="color: #FFFFFF !important; font-size: 2.2rem; line-height: 1.25; margin-bottom: 14px;">Vamos conversar sobre o seu.</h2>
+        <p style="color: #CBD5E1 !important; font-size: 1.05rem; line-height: 1.6; max-width: 650px; margin: 0 auto 28px auto;">
+          Se você procura uma empresa estruturada para executar seu projeto com segurança, nossa equipe está pronta para atender você.
         </p>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/5583998586796?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto." target="_blank" rel="noopener">Solicitar Orçamento</a>
-          <a href="projetos-residenciais.html" class="btn btn-secondary">Ver Residenciais</a>
-          <a href="projetos-corporativos.html" class="btn btn-secondary">Ver Corporativos</a>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 18px; margin-top: 24px;">
+          <div>
+            <a class="btn btn-primary" href="contato.html"   style="display: inline-flex !important; align-items: center !important; justify-content: center !important; padding: 14px 36px !important; font-size: 1rem !important; line-height: 1 !important; letter-spacing: 0.02em !important;">Solicitar Orçamento</a>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; font-size: 0.92rem; color: #94A3B8;">
+            <span>Ou navegue por categoria:</span>
+            <a href="projetos-residenciais.html" style="color: #D6AB78; text-decoration: underline; font-weight: 500; transition: opacity 0.2s;">Residenciais</a>
+            <span style="color: #64748B;">•</span>
+            <a href="projetos-corporativos.html" style="color: #D6AB78; text-decoration: underline; font-weight: 500; transition: opacity 0.2s;">Corporativos</a>
+          </div>
         </div>
       </div>
     </section>
@@ -149,5 +343,31 @@
   <script src="js/forms.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.portfolio-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.getAttribute('data-filter');
+
+          cards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
