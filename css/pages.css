@@ -1664,3 +1664,66 @@ section[style*="#2D2D2D"] .eyebrow,
   font-size: 0.95rem !important;
   line-height: 1.5 !important;
 }
+
+/* ========================================================
+   AJUSTE DE RESPONSIVIDADE: SEÇÃO TRANSPARÊNCIA / ESTRUTURA
+   ======================================================== */
+.structure-content .eyebrow {
+  white-space: nowrap !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+  .structure-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+
+  .structure-visual {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+
+  .structure-visual .image-placeholder span {
+    font-size: 1.4rem !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: manual !important;
+    white-space: normal !important;
+    padding: 0 10px !important;
+  }
+
+  .structure-content {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .structure-content h2 {
+    font-size: 1.6rem !important;
+    line-height: 1.25 !important;
+    word-break: normal !important;
+  }
+
+  .structure-content .btn,
+  .structure-content a.btn {
+    width: 100% !important;
+    max-width: 280px !important;
+    min-height: 48px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    padding: 12px 24px !important;
+    border-radius: 9999px !important;
+  }
+}
