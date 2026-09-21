@@ -20,7 +20,7 @@ function initContactForm() {
     const targetPhone = typeof SITE_SETTINGS !== "undefined" && SITE_SETTINGS.whatsappNumber ? SITE_SETTINGS.whatsappNumber : "5583998586796";
     const waUrl = `https://wa.me/${targetPhone}?text=${encoded}`;
 
-    // Tenta abrir em nova aba; se o navegador barrar o popup, redireciona diretamente na mesma janela
+    // Tenta abrir em nova aba; se o navegador barrar popup, redireciona diretamente na mesma janela
     const newTab = window.open(waUrl, "_blank");
     if (!newTab || newTab.closed || typeof newTab.closed === "undefined") {
       window.location.href = waUrl;
