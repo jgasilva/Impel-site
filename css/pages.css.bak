@@ -1,0 +1,2346 @@
+.section {
+  padding: 120px 0;
+}
+
+.section-muted {
+  background: var(--color-muted);
+}
+
+.section-dark {
+  background: var(--color-charcoal);
+  color: var(--color-offwhite);
+}
+
+.section-dark h2,
+.section-dark p,
+.section-dark li {
+  color: var(--color-offwhite);
+  list-style: none;
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+}
+
+.section-dark li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-gold);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.section-grid h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.section-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 46px;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.section-heading.center {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 64px;
+}
+
+.section-heading.center h2 {
+  margin-top: 12px;
+}
+
+.section-divider {
+  width: 120px;
+  height: 1px;
+  background: var(--color-line);
+  margin: 0 auto 64px;
+}
+
+.cards-grid,
+.stats-grid,
+.projects-grid,
+.portfolio-grid,
+.process-grid {
+  display: grid;
+  gap: 28px;
+}
+
+.cards-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.stats-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.projects-grid,
+.portfolio-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.process-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.info-card,
+.stat-card,
+.step-card,
+.process-card,
+.project-card,
+.portfolio-card,
+.contact-card {
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.info-card:hover,
+.stat-card:hover,
+.step-card:hover,
+.process-card:hover,
+.project-card:hover,
+.portfolio-card:hover,
+.contact-card:hover {
+  border-color: var(--color-taupe);
+  transform: translateY(-4px);
+}
+
+.info-card {
+  padding: 40px;
+}
+
+.info-card h3 {
+  margin-bottom: 16px;
+  font-size: 1.7rem;
+}
+
+.info-card p {
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  padding: 40px 32px;
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin-bottom: 16px;
+}
+
+.stat-card p {
+  margin: 0;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.step-card {
+  padding: 28px;
+  text-align: center;
+}
+
+.step-card span,
+.process-card span {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: var(--color-gold);
+}
+
+.step-card h3,
+.process-card h3 {
+  margin-bottom: 14px;
+}
+
+.process-card {
+  padding: 34px;
+}
+
+.process-card strong {
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: var(--color-charcoal);
+}
+
+.process-card-wide {
+  grid-column: span 3;
+}
+
+.feature-list {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  padding-left: 18px;
+}
+
+.feature-list li {
+  margin-bottom: 12px;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.center-action {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.final-cta {
+  padding-top: 64px;
+  padding-bottom: 140px;
+}
+
+.final-cta-box {
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: var(--radius);
+  padding: 80px;
+  text-align: center;
+  border: 1px solid var(--color-line);
+}
+
+.final-cta-box h2 {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.final-cta-box p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.final-cta-box .hero-actions {
+  justify-content: center;
+}
+
+.stats-section {
+  padding: 120px 0;
+}
+
+.structure-preview {
+  border: none !important;
+}
+
+.structure-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.structure-visual {
+  min-height: 520px;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  min-height: 280px;
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, #AF9F8F 0%, #2D2D2D 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: clamp(24px, 4vw, 36px);
+  overflow: hidden;
+  position: relative;
+}
+
+.image-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border: 1px solid rgba(247, 244, 240, 0.18);
+  border-radius: calc(var(--radius) - 4px);
+}
+
+.image-placeholder span {
+  position: relative;
+  z-index: 1;
+  color: var(--color-offwhite);
+  font-family: var(--font-title);
+  font-size: clamp(2.2rem, 4vw, 3.9rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  max-width: 420px;
+}
+
+
+.structure-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.structure-content h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 28px;
+}
+
+.structure-content p + p {
+  margin-top: 18px;
+}
+
+.structure-content .btn {
+  margin-top: 34px;
+}
+
+.projects-preview {
+  background: #faf8f5;
+}
+
+.project-card {
+  overflow: hidden;
+}
+
+.project-image,
+.portfolio-image {
+  min-height: 280px;
+  background:
+    linear-gradient(rgba(45, 45, 45, 0.18), rgba(45, 45, 45, 0.46)),
+    linear-gradient(135deg, var(--color-taupe), var(--color-charcoal));
+}
+
+.project-card h3 {
+  padding: 28px 28px 12px;
+}
+
+.project-card p {
+  padding: 0 28px 28px;
+}
+
+.page-hero {
+  padding: 80px 0 90px;
+  background-color: var(--color-charcoal) !important;
+  color: var(--color-muted) !important;
+}
+
+.page-hero h1 {
+  color: #ffffff !important;
+}
+
+.page-hero p {
+  color: var(--color-muted) !important;
+  opacity: 0.9;
+}
+
+
+/* Tag/Pill visivel em secoes escuras e hero */
+.page-hero .eyebrow,
+.hero .eyebrow {
+  display: inline-block !important;
+  color: var(--color-gold) !important;
+  background: rgba(214, 171, 120, 0.12) !important;
+  border: 1px solid rgba(214, 171, 120, 0.35) !important;
+  padding: 6px 16px !important;
+  border-radius: 999px !important;
+  font-size: 0.82rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  margin-bottom: 20px !important;
+}
+
+
+.page-hero-content {
+  max-width: 980px;
+}
+
+.page-hero h1 {
+  max-width: 920px;
+}
+
+.page-hero p {
+  max-width: 760px;
+  margin-top: 28px;
+  font-size: 1.08rem;
+}
+
+.project-filter {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(45, 45, 45, 0.16);
+  color: var(--color-charcoal);
+  background: transparent;
+  font-size: 0.92rem;
+}
+
+.filter-pill.active,
+.filter-pill:hover {
+  background: var(--color-charcoal);
+  color: var(--color-offwhite);
+}
+
+.portfolio-card {
+  overflow: hidden;
+}
+
+.portfolio-content {
+  padding: 28px;
+}
+
+.portfolio-content span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--color-gold);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.portfolio-content h3 {
+  margin-bottom: 12px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.contact-card {
+  padding: 44px;
+}
+
+.contact-card h2 {
+  margin: 14px 0 18px;
+}
+
+.contact-list {
+  list-style: none;
+  margin: 28px 0;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-bottom: 12px;
+  color: rgba(45, 45, 45, 0.78);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 16px;
+  border: 1px solid rgba(45, 45, 45, 0.14);
+  border-radius: 14px;
+  background: var(--color-offwhite);
+  color: var(--color-charcoal);
+  outline: none;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-gold);
+  background: white;
+}
+
+.contact-form .btn {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+/* Refinamento dos cards de portfolio e imagens */
+.portfolio-card,
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover,
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(45, 45, 45, 0.08);
+}
+
+.portfolio-image,
+.project-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-image img,
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-image img,
+.project-card:hover .project-image img {
+  transform: scale(1.04);
+}
+
+/* Imagens reais aplicadas na estrutura institucional */
+.image-placeholder[data-bg] {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.image-placeholder[data-bg]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(45, 45, 45, 0.25) 0%, rgba(45, 45, 45, 0.78) 100%);
+  border-radius: inherit;
+  z-index: 0;
+}
+/* Ajuste fino: imagem limpa no topo e gradiente concentrado na base do texto */
+.image-placeholder[data-bg]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(20, 20, 20, 0.85) 90%,
+    rgba(15, 15, 15, 0.95) 100%
+  ) !important;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+/* Contraste para listas em seções escuras */
+.dark-list li,
+.section-muted .feature-list li {
+  color: #E2E8F0 !important;
+}
+
+.dark-list li::before,
+.section-muted .feature-list li::before {
+  color: #C5A880 !important; /* Destaque no marcador/bullet se houver */
+}
+
+/* =======================================================
+   CORREÇÃO DE RESPONSIVIDADE MOBILE & OVERFLOW
+   ======================================================= */
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.container,
+.section-grid,
+.steps-grid,
+.card-dark,
+.section {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+.step-card img,
+.factory-image,
+[class*="image"] img {
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .section-grid,
+  .steps-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .section-muted,
+  .section-text {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    word-break: break-word;
+  }
+
+  footer .container,
+  .footer-content {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+/* =======================================================
+   HOVER ESPECÍFICO DOS BOTÕES "SOLICITAR ORÇAMENTO"
+   ======================================================= */
+
+a[href*="orcamento"]:hover,
+a[href*="contato"]:hover,
+.btn-primary:hover,
+.btn-orcamento:hover,
+button.btn-primary:hover,
+.hero-actions a:hover,
+.cta-section a:hover {
+  background-color: #F7F4F0 !important;
+  color: #C4C7AC !important;
+  border-color: #F7F4F0 !important;
+  transition: all 0.25s ease-in-out;
+}
+
+/* =======================================================
+   CORREÇÃO DA SEÇÃO ESTRUTURA / FÁBRICA PRÓPRIA (MOBILE)
+   ======================================================= */
+
+.structure-preview {
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.structure-visual {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.structure-visual .image-placeholder {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 280px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.structure-content {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .structure-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .structure-content {
+    padding: 0 16px 24px 16px !important;
+  }
+
+  .structure-content h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .structure-content p {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    word-break: normal !important;
+  }
+}
+
+
+/* =======================================================
+   PADRONIZAÇÃO DEFINITIVA DE PÍLULAS E CONTRASTE
+   ======================================================= */
+
+/* 1. Pílulas / Eyebrows: formato oval limpo e premium */
+.eyebrow,
+span.eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.76rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.14em !important;
+  padding: 6px 16px !important;
+  border-radius: 9999px !important;
+  margin-bottom: 16px !important;
+  box-sizing: border-box !important;
+  line-height: 1 !important;
+}
+
+/* Pílula sobre fundo claro (bege) */
+body:not(.dark) .eyebrow,
+.section:not(.section-dark) .eyebrow,
+.hero .eyebrow {
+  color: #7A5B28 !important;
+  background-color: rgba(122, 91, 40, 0.1) !important;
+  border: 1px solid rgba(122, 91, 40, 0.3) !important;
+}
+
+/* Pílula sobre fundo escuro (cards grafite) */
+.section-dark .eyebrow,
+.hero-card .eyebrow,
+.structure-content .eyebrow,
+.section-muted .eyebrow,
+div[style*="background: rgb(36"] .eyebrow {
+  color: #E5C38C !important;
+  background-color: rgba(229, 195, 140, 0.12) !important;
+  border: 1px solid rgba(229, 195, 140, 0.35) !important;
+}
+
+/* 2. Legibilidade do texto em fundo bege terroso */
+.hero-content .hero-subtitle,
+.hero-content p {
+  color: #1F2421 !important;
+  font-weight: 500 !important;
+}
+
+.hero-content .hero-description {
+  color: #2D3748 !important;
+  font-weight: 400 !important;
+}
+
+/* Subtítulos e parágrafos de seções sobre fundo bege */
+.section-header p,
+.section-text p,
+.section:not(.section-dark) h2 + p {
+  color: #24292F !important;
+  font-weight: 400 !important;
+  opacity: 0.95 !important;
+}
+
+/* 3. Botão da seção de transparência/estrutura */
+.structure-content .btn,
+.structure-content a.btn {
+  background-color: #D4A373 !important;
+  color: #1C1917 !important;
+  font-weight: 600 !important;
+  border: none !important;
+}
+
+
+/* =======================================================
+   REFINAMENTO DEFINITIVO DE CORES E CONTRASTES
+   ======================================================= */
+
+/* --- 1. TEXTOS DENTRO DOS CARDS ESCUROS (Legibilidade Máxima) --- */
+.section-dark p,
+.section-muted p,
+.hero-card p,
+.hero-card span,
+.structure-content p,
+.section-grid p,
+div[style*="background: rgb(36"] p,
+div[style*="background-color: rgb(36"] p {
+  color: #E2E8F0 !important; /* Cinza claro luminoso / alto contraste */
+  opacity: 0.95 !important;
+}
+
+.section-dark .hero-subtitle,
+.section-dark h2 + p {
+  color: #CBD5E1 !important;
+}
+
+/* Títulos dos cards escuros */
+.section-dark h2,
+.structure-content h2,
+.section-grid h2 {
+  color: #FFFFFF !important;
+}
+
+/* Links em cards escuros */
+.section-dark a:not(.btn),
+.structure-content a:not(.btn) {
+  color: #E5C38C !important;
+  text-decoration: underline !important;
+  font-weight: 500 !important;
+}
+
+/* --- 2. TEXTOS SOBRE O FUNDO BEGE DO SITE --- */
+.hero-content p,
+.hero-content .hero-subtitle,
+.hero-content .hero-description,
+.section:not(.section-dark):not(.section-muted) p {
+  color: #1A1C1E !important; /* Grafite profundo bem nítido */
+  font-weight: 450 !important;
+}
+
+/* --- 3. PADRONIZAÇÃO DAS PÍLULAS (EYEBROWS) --- */
+.eyebrow,
+span.eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  padding: 5px 14px !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  margin-bottom: 14px !important;
+  width: fit-content !important;
+}
+
+/* Pílula no Fundo Bege (Discreta, elegante, sem relevo feio) */
+.section:not(.section-dark):not(.section-muted) .eyebrow,
+.hero .eyebrow,
+.final-cta-box .eyebrow {
+  color: #7A5826 !important;
+  background-color: rgba(140, 109, 63, 0.08) !important;
+  border: 1px solid rgba(140, 109, 63, 0.28) !important;
+}
+
+/* Pílula dentro de Cards Escuros */
+.section-dark .eyebrow,
+.section-muted .eyebrow,
+.structure-content .eyebrow {
+  color: #F1D4A7 !important;
+  background-color: rgba(241, 212, 167, 0.1) !important;
+  border: 1px solid rgba(241, 212, 167, 0.3) !important;
+}
+
+/* Botão da fábrica */
+.structure-content .btn,
+.structure-content a.btn {
+  background-color: #D4A373 !important;
+  color: #1A1A1A !important;
+  border: none !important;
+  font-weight: 600 !important;
+}
+
+
+/* =======================================================
+   CORREÇÃO CIRÚRGICA: PROCESSO / SECTION-MUTED
+   ======================================================= */
+
+/* Garante texto branco/claro no bloco escuro de "Como trabalhamos" */
+.section-muted .section-heading p,
+.section-muted p {
+  color: #E2E8F0 !important; /* Branco fosco de alta legibilidade */
+  opacity: 0.95 !important;
+}
+
+.section-muted .section-heading h2,
+.section-muted h2 {
+  color: #FFFFFF !important;
+}
+
+/* Evita que qualquer span filho herde borda/fundo caso haja resquício de aninhamento */
+.eyebrow .eyebrow,
+.eyebrow span {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+/* FORÇA BRANCO LUMINOSO NOS PARÁGRAFOS ESCUROS */
+p.text-light,
+.structure-content p,
+.section-heading p,
+.section-muted p {
+  color: #F3F4F6 !important;
+  opacity: 1 !important;
+}
+
+/* Remove cortes secos e linhas horizontais em transições de seções */
+hr,
+.section-divider,
+.final-cta {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+
+/* --- REFORMULACAO TOTAL EYEBROWS --- */
+
+/* Base da Pílula (maior, mais nítida e encorpada) */
+.eyebrow,
+span.eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.16em !important;
+  padding: 8px 20px !important;
+  border-radius: 9999px !important;
+  box-sizing: border-box !important;
+  line-height: 1.1 !important;
+  margin-bottom: 18px !important;
+  transition: all 0.2s ease !important;
+}
+
+/* 1. Pílulas no Fundo Claro (Bege do site) - Legibilidade e presença forte */
+body:not(.dark) .eyebrow,
+.section:not(.section-dark):not(.section-muted) .eyebrow,
+.final-cta-box .eyebrow {
+  color: #2E2419 !important; /* Tom café/grafite escuro de altíssimo contraste */
+  background-color: rgba(62, 48, 32, 0.08) !important;
+  border: 1.5px solid rgba(62, 48, 32, 0.35) !important;
+}
+
+/* 2. Pílulas dentro de Cards e Seções Escuras */
+.section-dark .eyebrow,
+.section-muted .eyebrow,
+.structure-content .eyebrow,
+.hero-card .eyebrow {
+  color: #FADCA8 !important; /* Dourado nobre claro */
+  background-color: rgba(250, 220, 168, 0.12) !important;
+  border: 1.5px solid rgba(250, 220, 168, 0.4) !important;
+}
+
+/* Garante texto branco em qualquer subtítulo sobre fundo grafite */
+.section-dark h2 + p,
+.section-muted h2 + p,
+.structure-content h2 + p,
+.section-dark .section-subtitle,
+.section-muted .section-subtitle {
+  color: #F1F5F9 !important;
+  opacity: 0.95 !important;
+}
+
+
+/* =======================================================
+   CORREÇÃO GLOBAL MULTI-PÁGINAS: CONTRASTE, PÍLULAS E ALINHAMENTO
+   ======================================================= */
+
+/* 1. TEXTOS DE APOIO EM CARDS ESCUROS (Legibilidade Absoluta) */
+.section-dark p,
+.section-muted p,
+.hero-card p,
+.structure-content p,
+.section-heading p,
+.final-cta-box p,
+.partner-content p,
+.portfolio-header p,
+.projects-header p,
+h2 + p,
+.section-dark h2 + p,
+.section-muted h2 + p {
+  color: #F1F5F9 !important; /* Branco luminoso suave */
+  opacity: 0.95 !important;
+}
+
+/* Garante texto escuro apenas quando explicitamente sobre o fundo claro */
+.section:not(.section-dark):not(.section-muted) > .container > p,
+.section:not(.section-dark):not(.section-muted) > .container > .section-heading > p {
+  color: #1F2421 !important;
+}
+
+/* 2. PÍLULAS / EYEBROWS (Mais encorpadas e destacadas) */
+.eyebrow,
+span.eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: var(--font-body, sans-serif) !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.16em !important;
+  padding: 7px 18px !important;
+  border-radius: 9999px !important;
+  margin-bottom: 16px !important;
+  line-height: 1 !important;
+}
+
+/* Pílula no fundo claro (bege) */
+body:not(.dark) .eyebrow,
+.section:not(.section-dark):not(.section-muted) .eyebrow,
+.structure-preview .eyebrow {
+  color: #2D2216 !important;
+  background-color: rgba(45, 34, 22, 0.08) !important;
+  border: 1.5px solid rgba(45, 34, 22, 0.4) !important;
+}
+
+/* Pílula no fundo escuro (cards pretos/grafite) */
+.section-dark .eyebrow,
+.section-muted .eyebrow,
+.hero-card .eyebrow,
+div[style*="background: rgb(36"] .eyebrow {
+  color: #F8E2BE !important; /* Dourado suave luminoso */
+  background-color: rgba(248, 226, 190, 0.12) !important;
+  border: 1.5px solid rgba(248, 226, 190, 0.45) !important;
+}
+
+/* 3. FILTROS DA PÁGINA DE PROJETOS */
+.project-filters,
+.filter-tabs {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  margin-bottom: 32px !important;
+}
+
+.project-filters button,
+.project-filters a,
+.filter-tab {
+  color: #F1F5F9 !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  padding: 8px 20px !important;
+  border-radius: 999px !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+.project-filters .active,
+.filter-tab.active {
+  background: #D4A373 !important;
+  color: #1A1A1A !important;
+  border-color: #D4A373 !important;
+  font-weight: 600 !important;
+}
+
+/* 4. ALINHAMENTO DA SEÇÃO ESTRUTURA (IMAGEM + TEXTO) */
+.structure-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 56px !important;
+  align-items: center !important; /* Alinhamento vertical centralizado */
+}
+
+.structure-visual,
+.structure-visual .image-placeholder {
+  height: 100% !important;
+  min-height: 420px !important;
+  border-radius: 16px !important;
+}
+
+.structure-content {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+
+/* --- CORREÇÕES ESPECÍFICAS DE CLASSES REAIS --- */
+
+/* 1. Filtros da página de projetos (.filter-pill) */
+.filter-pill,
+a.filter-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 22px !important;
+  border-radius: 999px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  color: #E2E8F0 !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.2s ease !important;
+}
+
+.filter-pill:hover,
+.filter-pill.active {
+  background-color: #D4A373 !important;
+  color: #181A1B !important;
+  border-color: #D4A373 !important;
+}
+
+/* 2. Parágrafos em cards escuros de todas as seções */
+.section-heading p,
+.portfolio-header p,
+.partner-content p,
+.structure-content p {
+  color: #F1F5F9 !important;
+  opacity: 0.95 !important;
+}
+
+/* 3. Destaque das pílulas (.eyebrow) em qualquer página */
+.eyebrow,
+span.eyebrow {
+  display: inline-flex !important;
+  padding: 7px 18px !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  border-radius: 9999px !important;
+  margin-bottom: 14px !important;
+  line-height: 1 !important;
+}
+
+/* Pílula no escuro: Relacionamento Profissional, Portfólio, Como Trabalhamos */
+.section-heading .eyebrow,
+.structure-content .eyebrow,
+.section-dark .eyebrow,
+.section-muted .eyebrow {
+  color: #FADCA8 !important;
+  background-color: rgba(250, 220, 168, 0.14) !important;
+  border: 1.5px solid rgba(250, 220, 168, 0.45) !important;
+}
+
+/* Pílula no fundo claro: Visitação, Diferenciais, Soluções */
+body:not(.dark) .structure-preview .eyebrow,
+.section:not(.section-dark):not(.section-muted):not(.page-hero) .eyebrow {
+  color: #2E2419 !important;
+  background-color: rgba(46, 36, 25, 0.08) !important;
+  border: 1.5px solid rgba(46, 36, 25, 0.35) !important;
+}
+
+/* Força absoluta para eyebrow em page-hero e hero */
+body section.page-hero .eyebrow,
+body section.hero .eyebrow,
+.page-hero span.eyebrow,
+.hero span.eyebrow {
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1.5px solid rgba(214, 171, 120, 0.5) !important;
+  display: inline-flex !important;
+}
+
+/* 4. Alinhamento vertical da seção Conheça nossa estrutura */
+.structure-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 48px !important;
+  align-items: center !important;
+}
+
+.structure-visual {
+  min-height: auto !important;
+  height: 100% !important;
+}
+
+.structure-visual .image-placeholder {
+  width: 100% !important;
+  height: 380px !important;
+  border-radius: 16px !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.structure-content {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+
+/* === CORRECOES DEFINITIVAS IMPEL === */
+
+/* 1. TEXTOS EM BLOCOS ESCUROS (Legibilidade Cristalina) */
+.section-muted p,
+.section-muted .section-heading p,
+.section-dark p,
+.section-dark .section-heading p,
+.structure-content p,
+.partner-content p {
+  color: #F8FAFC !important;
+  opacity: 0.95 !important;
+}
+
+/* 2. PILULAS DE FILTRO (.project-filter no singular) */
+.project-filter {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  margin-bottom: 32px !important;
+}
+
+.project-filter .filter-pill,
+.project-filter a.filter-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 22px !important;
+  border-radius: 999px !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  color: #F1F5F9 !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+.project-filter .filter-pill.active,
+.project-filter .filter-pill:hover {
+  background: #D4A373 !important;
+  color: #121417 !important;
+  border-color: #D4A373 !important;
+}
+
+/* 3. EYEBROWS / PILULAS EM BLOCOS ESCUROS */
+.section-muted .eyebrow,
+.section-dark .eyebrow,
+.structure-content .eyebrow,
+.section-heading .eyebrow {
+  display: inline-flex !important;
+  color: #FADCA8 !important;
+  background-color: rgba(250, 220, 168, 0.15) !important;
+  border: 1.5px solid rgba(250, 220, 168, 0.45) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  padding: 7px 18px !important;
+  border-radius: 9999px !important;
+  margin-bottom: 16px !important;
+}
+
+/* 4. ALINHAMENTO DA SECAO DE ESTRUTURA */
+.structure-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 48px !important;
+  align-items: center !important;
+}
+
+.structure-visual .image-placeholder {
+  min-height: 400px !important;
+  border-radius: 16px !important;
+  background-size: cover !important;
+}
+
+/* Correção de contraste das tags/eyebrows em temas escuros */
+.eyebrow,
+.page-hero .eyebrow,
+.hero .eyebrow,
+.section-dark .eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.12) !important;
+  border: 1px solid rgba(214, 171, 120, 0.4) !important;
+  padding: 6px 14px !important;
+  border-radius: 999px !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 20px !important;
+}
+
+
+/* Regra Oficial Manual: Aplicação em Fundo Charcoal #2D2D2D */
+.page-hero .eyebrow,
+.hero .eyebrow {
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1.5px solid rgba(214, 171, 120, 0.5) !important;
+  display: inline-flex !important;
+}
+
+/* ===================================================
+   CALIBRAÇÃO OFICIAL MANUAL IMPEL - HOME (INDEX)
+   =================================================== */
+
+/* 1. Hero Textos e Card Direito */
+.hero .hero-subtitle {
+  color: #AF9F8F !important;
+  opacity: 1 !important;
+}
+
+.hero .hero-description {
+  color: #F7F4F0 !important;
+  opacity: 0.9 !important;
+}
+
+.hero-card h3,
+.hero-card .card-title,
+.hero-card p:first-of-type {
+  color: #F7F4F0 !important;
+  font-family: var(--font-title) !important;
+  font-size: 1.5rem !important;
+  margin-bottom: 12px !important;
+}
+
+.hero-card p,
+.hero-card .card-subtitle {
+  color: #AF9F8F !important;
+  opacity: 1 !important;
+}
+
+/* 2. Pills (Eyebrows) em seções escuras (Charcoal #2D2D2D) */
+.section-dark .eyebrow,
+.structure-content .eyebrow,
+.how-it-works .eyebrow,
+div[class*="dark"] .eyebrow,
+section[class*="dark"] .eyebrow {
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1.5px solid rgba(214, 171, 120, 0.45) !important;
+  display: inline-flex !important;
+}
+
+/* 3. Pills (Eyebrows) em fundo claro/linho */
+.section:not(.section-dark) .eyebrow,
+.solutions-section .eyebrow,
+.projects-preview .eyebrow,
+.final-cta-box .eyebrow {
+  color: #2D2D2D !important;
+  background-color: rgba(45, 45, 45, 0.06) !important;
+  border: 1.5px solid rgba(45, 45, 45, 0.25) !important;
+  display: inline-flex !important;
+}
+
+/* 4. Números e cards da seção "Como Trabalhamos" */
+.how-it-works .step-card,
+.process-grid .process-card {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.how-it-works .step-number,
+.process-grid .step-number {
+  color: #D6AB78 !important;
+  font-weight: 700 !important;
+}
+
+.how-it-works .step-title,
+.process-grid .step-title {
+  color: #F7F4F0 !important;
+}
+
+/* 5. Seção de Projetos - Fundo coerente com a paleta */
+.projects-preview {
+  background-color: var(--color-muted) !important;
+}
+
+/* ===================================================
+   TAGS (.EYEBROW) DOS BLOCOS ESCUROS DA HOME (OFICIAL)
+   =================================================== */
+
+/* 1. Transparência */
+.structure-content span.eyebrow,
+.structure-content .eyebrow {
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1.5px solid rgba(214, 171, 120, 0.5) !important;
+  display: inline-flex !important;
+}
+
+/* 2. Quem é a IMPEL */
+.section-grid span.eyebrow,
+.section-grid .eyebrow {
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1.5px solid rgba(214, 171, 120, 0.5) !important;
+  display: inline-flex !important;
+}
+
+/* 3. Como Trabalhamos */
+.section-heading span.eyebrow,
+.section-heading .eyebrow {
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1.5px solid rgba(214, 171, 120, 0.5) !important;
+  display: inline-flex !important;
+}
+
+/* ===================================================
+   CORREÇÃO DEFINITIVA: HERO ALINHAMENTO E DIFERENCIAIS
+   =================================================== */
+
+/* Proporção e Alinhamento Premium - Hero Home */
+.hero {
+  padding: 70px 0 80px !important;
+}
+
+.hero .hero-grid {
+  display: grid !important;
+  grid-template-columns: 1.4fr 0.9fr !important;
+  align-items: center !important;
+  gap: 48px !important;
+  max-width: 1240px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.hero .hero-content {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.hero-content .hero-title,
+.hero-content h1 {
+  font-size: clamp(2.4rem, 3.4vw, 3.2rem) !important;
+  line-height: 1.18 !important;
+  margin-bottom: 20px !important;
+  white-space: normal !important;
+}
+
+.hero-content .hero-subtitle {
+  max-width: 580px !important;
+  margin-bottom: 14px !important;
+}
+
+.hero-content .hero-description {
+  max-width: 580px !important;
+  margin-bottom: 28px !important;
+}
+
+.hero .hero-card {
+  width: 100% !important;
+  max-width: 420px !important;
+  justify-self: end !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-height: 260px !important;
+  padding: 36px 32px !important;
+  box-sizing: border-box !important;
+  background: rgba(255, 255, 255, 0.035) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 12px !important;
+}
+
+.hero .hero-card p {
+  font-size: 1.35rem !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+}
+
+.hero .hero-card span {
+  display: block !important;
+  margin-top: 10px !important;
+  line-height: 1.5 !important;
+}
+
+/* 2. Pílula Diferenciais (Stats Section - Fundo Claro) */
+.stats-section .section-heading .eyebrow,
+.stats-section span.eyebrow {
+  color: #2D2D2D !important;
+  background-color: rgba(45, 45, 45, 0.08) !important;
+  border: 1.5px solid rgba(45, 45, 45, 0.4) !important;
+  font-weight: 700 !important;
+  display: inline-flex !important;
+  opacity: 1 !important;
+}
+
+/* ===================================================
+   ALINHAMENTO EM LINHA RETA DA COLUNA DE TEXTO DA HERO
+   =================================================== */
+
+.hero .hero-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.hero-content .hero-title,
+.hero-content h1 {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  text-align: left !important;
+  margin-bottom: 20px !important;
+}
+
+.hero-content .hero-subtitle,
+.hero-content .hero-description,
+.hero-content p {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  text-align: left !important;
+  max-width: 600px !important;
+}
+
+.hero-content .hero-actions {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  align-self: flex-start !important;
+}
+
+.hero-content .hero-actions .btn {
+  margin-left: 0 !important;
+}
+
+/* ===================================================
+   REFINAMENTO PROPORCIONAL DEFINITIVO DA HERO
+   =================================================== */
+
+/* Enxuga a distância e compacta o bloco da esquerda */
+.hero-content {
+  gap: 16px !important;
+}
+
+.hero-content .hero-title,
+.hero-content h1 {
+  font-size: clamp(2.3rem, 3.4vw, 3.1rem) !important;
+  line-height: 1.15 !important;
+  margin-bottom: 0 !important;
+  max-width: 620px !important;
+}
+
+.hero-content .hero-subtitle {
+  font-size: 1.15rem !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  max-width: 560px !important;
+}
+
+.hero-content .hero-description {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  max-width: 560px !important;
+}
+
+.hero-content .hero-actions {
+  margin-top: 12px !important;
+}
+
+/* Card da direita: altura equilibrada e texto centralizado verticalmente */
+.hero .hero-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  min-height: 280px !important;
+  max-height: 340px !important;
+  padding: 40px !important;
+  box-sizing: border-box !important;
+}
+
+.hero .hero-card p {
+  font-size: 1.5rem !important;
+  line-height: 1.3 !important;
+  margin: 0 !important;
+}
+
+.hero .hero-card span {
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  margin-top: 12px !important;
+  display: block !important;
+}
+
+/* ===================================================
+   CORREÇÃO CIRÚRGICA: TRANSPARÊNCIA E COMO TRABALHAMOS
+   =================================================== */
+
+/* 1. Pílula Transparência (fundo escuro de structure-content) */
+.structure-content .eyebrow,
+.structure-content span.eyebrow {
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1px solid rgba(214, 171, 120, 0.45) !important;
+  display: inline-flex !important;
+  opacity: 1 !important;
+  font-weight: 600 !important;
+}
+
+/* 2. Pílula Como Trabalhamos (section-muted escura) */
+.section-muted .section-heading .eyebrow,
+.section-muted span.eyebrow {
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1px solid rgba(214, 171, 120, 0.45) !important;
+  display: inline-flex !important;
+  opacity: 1 !important;
+  font-weight: 600 !important;
+}
+
+/* ===================================================
+   PADRONIZAÇÃO GERAL: PÍLULAS SOBRE FUNDO ESCURO
+   (Modelo idêntico ao de Como Trabalhamos)
+   =================================================== */
+
+/* Seleciona todas as pílulas em áreas escuras: Hero, Quem Somos, Estrutura, etc */
+.hero .eyebrow,
+.structure-content .eyebrow,
+.about-section .eyebrow,
+.about-content .eyebrow,
+.section-dark .eyebrow,
+.section-muted .eyebrow,
+div[style*="background: rgb(36"] .eyebrow,
+div[style*="background-color: rgb(36"] .eyebrow,
+div[style*="#2D2D2D"] .eyebrow,
+section[style*="#2D2D2D"] .eyebrow,
+.stats-section-dark .eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.76rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.14em !important;
+  padding: 6px 16px !important;
+  border-radius: 9999px !important;
+  margin-bottom: 16px !important;
+  box-sizing: border-box !important;
+  line-height: 1 !important;
+  color: #D6AB78 !important;
+  background-color: rgba(214, 171, 120, 0.15) !important;
+  border: 1px solid rgba(214, 171, 120, 0.45) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* ===================================================
+   REFINAMENTO VISUAL: PROJETOS PREVIEW (FUNDO CLARO)
+   =================================================== */
+
+.projects-preview .section-heading h2 {
+  color: #2D2D2D !important;
+}
+
+.projects-preview .section-heading p {
+  color: #4A5568 !important;
+  opacity: 1 !important;
+}
+
+.projects-preview .project-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(45, 45, 45, 0.08) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+}
+
+.projects-preview .project-card h3 {
+  color: #2D2D2D !important;
+  font-family: var(--font-title) !important;
+  font-size: 1.25rem !important;
+  margin-bottom: 8px !important;
+}
+
+.projects-preview .project-card p {
+  color: #5A5A5A !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+}
+
+/* ========================================================
+   AJUSTE DE RESPONSIVIDADE: SEÇÃO TRANSPARÊNCIA / ESTRUTURA
+   ======================================================== */
+.structure-content .eyebrow {
+  white-space: nowrap !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+  .structure-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+
+  .structure-visual {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+
+  .structure-visual .image-placeholder span {
+    font-size: 1.4rem !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: manual !important;
+    white-space: normal !important;
+    padding: 0 10px !important;
+  }
+
+  .structure-content {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .structure-content h2 {
+    font-size: 1.6rem !important;
+    line-height: 1.25 !important;
+    word-break: normal !important;
+  }
+
+  .structure-content .btn,
+  .structure-content a.btn {
+    width: 100% !important;
+    max-width: 280px !important;
+    min-height: 48px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    padding: 12px 24px !important;
+    border-radius: 9999px !important;
+  }
+}
+
+/* ========================================================
+   REFINAMENTO PREMIUM: HEADER ENXUTO + HERO CARD COM IMAGEM
+   ======================================================== */
+
+/* 1. Header mais compacto e elegante */
+.site-header {
+  padding: 12px 0 !important;
+}
+
+.site-header .brand img {
+  height: 64px !important;
+  max-height: 64px !important;
+  width: auto !important;
+  display: block !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+/* 2. Botão secundário (outline) no Cabeçalho */
+.site-header .header-cta.btn-outline {
+  background: transparent !important;
+  color: #D6AB78 !important;
+  border: 1.5px solid #D6AB78 !important;
+  font-weight: 500 !important;
+  padding: 8px 18px !important;
+  font-size: 0.9rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.site-header .header-cta.btn-outline:hover {
+  background: #D6AB78 !important;
+  color: #2D2D2D !important;
+}
+
+/* 3. Card visual da Hero com render de fundo e overlay */
+.hero-visual-card {
+  position: relative !important;
+  background-image: linear-gradient(180deg, rgba(20, 20, 20, 0.25) 0%, rgba(20, 20, 20, 0.88) 100%), url('/assets/projetos/res-cozinha-ilha-madeira.webp') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  min-height: 380px !important;
+  width: 100% !important;
+  max-width: 480px !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45) !important;
+  border: 1px solid rgba(214, 171, 120, 0.25) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  padding: 0 !important;
+}
+
+.hero-card-overlay {
+  padding: 32px 28px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  backdrop-filter: blur(2px) !important;
+}
+
+.hero-card-tag {
+  display: inline-block !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: #D6AB78 !important;
+  background: rgba(45, 45, 45, 0.7) !important;
+  border: 1px solid rgba(214, 171, 120, 0.4) !important;
+  padding: 4px 12px !important;
+  border-radius: 9999px !important;
+  margin-bottom: 12px !important;
+  font-weight: 600 !important;
+}
+
+.hero-visual-card p {
+  font-family: var(--font-title, serif) !important;
+  font-size: 1.55rem !important;
+  line-height: 1.25 !important;
+  color: #F7F4F0 !important;
+  margin: 0 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
+}
+
+.hero-visual-card p span {
+  display: block !important;
+  font-family: var(--font-body, sans-serif) !important;
+  font-size: 0.95rem !important;
+  font-weight: 300 !important;
+  color: #E2E8F0 !important;
+  margin-top: 8px !important;
+  line-height: 1.4 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+@media (max-width: 768px) {
+  .hero-visual-card {
+    min-height: 280px !important;
+    max-width: 100% !important;
+    margin-top: 24px !important;
+  }
+}
+
+/* ========================================================
+   CORREÇÃO DEFINITIVA: ALINHAMENTO HERO, LOGO E CARD VISUAL
+   ======================================================== */
+
+/* 1. Alinhamento exato da Hero com as seções de baixo */
+.hero .hero-grid {
+  max-width: 1240px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+  display: grid !important;
+  grid-template-columns: 1.25fr 0.95fr !important;
+  gap: 56px !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+}
+
+.hero .hero-content {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.hero .hero-content h1,
+.hero .hero-content .hero-title {
+  font-size: clamp(2.4rem, 3.8vw, 3.4rem) !important;
+  line-height: 1.15 !important;
+  margin-bottom: 20px !important;
+  text-align: left !important;
+}
+
+/* 2. Logo no Header: Visível, elegante e proporcional */
+.site-header {
+  padding: 10px 0 !important;
+}
+
+.site-header .brand {
+  width: 170px !important;
+  max-width: 180px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.site-header .brand img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  display: block !important;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+}
+
+/* 3. Botão do Header: Visibilidade perfeita sobre fundo bege */
+.site-header .header-cta {
+  background-color: #2D2D2D !important;
+  color: #F7F4F0 !important;
+  border: 1px solid #2D2D2D !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+  padding: 10px 22px !important;
+  border-radius: 9999px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: all 0.25s ease !important;
+}
+
+.site-header .header-cta:hover {
+  background-color: #D6AB78 !important;
+  color: #2D2D2D !important;
+  border-color: #D6AB78 !important;
+}
+
+/* 4. Card Visual do Hero: Imagem completa com texto na base */
+.hero .hero-visual-card {
+  position: relative !important;
+  background-image: linear-gradient(180deg, rgba(20, 20, 20, 0.1) 0%, rgba(20, 20, 20, 0.4) 50%, rgba(20, 20, 20, 0.92) 100%), url('assets/projetos/res-cozinha-ilha-madeira.webp') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  min-height: 420px !important;
+  height: 420px !important;
+  width: 100% !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  align-items: flex-start !important;
+  padding: 0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5) !important;
+  margin: 0 !important;
+}
+
+.hero-visual-card .hero-card-overlay {
+  width: 100% !important;
+  padding: 32px 30px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  background: linear-gradient(180deg, transparent 0%, rgba(15, 15, 15, 0.85) 100%) !important;
+}
+
+.hero-card-overlay .hero-card-tag {
+  display: inline-block !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: #D6AB78 !important;
+  background: rgba(30, 30, 30, 0.8) !important;
+  border: 1px solid rgba(214, 171, 120, 0.45) !important;
+  padding: 5px 14px !important;
+  border-radius: 9999px !important;
+  margin-bottom: 12px !important;
+  font-weight: 600 !important;
+}
+
+.hero-card-overlay p {
+  font-family: var(--font-title, serif) !important;
+  font-size: 1.6rem !important;
+  line-height: 1.2 !important;
+  color: #FFFFFF !important;
+  margin: 0 0 6px 0 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+}
+
+.hero-card-overlay .hero-card-sub {
+  display: block !important;
+  font-family: var(--font-body, sans-serif) !important;
+  font-size: 0.95rem !important;
+  font-weight: 300 !important;
+  color: #E2E8F0 !important;
+  line-height: 1.4 !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* ========================================================
+   FIX FINAL: IMAGEM REAL DO HERO, LOGO E BOTAO HEADER
+   ======================================================== */
+
+/* 1. Logo IMPEL com presença real */
+.site-header .brand {
+  width: 190px !important;
+  min-width: 170px !important;
+}
+
+.site-header .brand img {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 48px !important;
+  display: block !important;
+}
+
+/* 2. Botão do Header em Alto Contraste (#2D2D2D) */
+.header-cta-solid {
+  background-color: #2D2D2D !important;
+  color: #F7F4F0 !important;
+  border: 1px solid #2D2D2D !important;
+  font-size: 0.86rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.03em !important;
+  padding: 10px 22px !important;
+  border-radius: 9999px !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.25s ease !important;
+}
+
+.header-cta-solid:hover {
+  background-color: #D6AB78 !important;
+  color: #2D2D2D !important;
+  border-color: #D6AB78 !important;
+}
+
+/* 3. Hero Visual Card com tag <img> absoluta */
+.hero .hero-visual-card {
+  position: relative !important;
+  min-height: 420px !important;
+  height: 420px !important;
+  width: 100% !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  align-items: flex-start !important;
+  padding: 0 !important;
+  background-color: #1a1a1a !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5) !important;
+}
+
+.hero-visual-card .hero-card-bg-img {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: 1 !important;
+  transition: transform 0.6s ease !important;
+}
+
+.hero-visual-card:hover .hero-card-bg-img {
+  transform: scale(1.04) !important;
+}
+
+.hero-visual-card .hero-card-overlay {
+  position: relative !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  padding: 32px 30px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  background: linear-gradient(180deg, transparent 0%, rgba(15, 15, 15, 0.4) 40%, rgba(15, 15, 15, 0.95) 100%) !important;
+}
+
+.hero-card-overlay .hero-card-tag {
+  display: inline-block !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: #D6AB78 !important;
+  background: rgba(30, 30, 30, 0.85) !important;
+  border: 1px solid rgba(214, 171, 120, 0.5) !important;
+  padding: 5px 14px !important;
+  border-radius: 9999px !important;
+  margin-bottom: 12px !important;
+  font-weight: 600 !important;
+}
+
+.hero-card-overlay p {
+  font-family: var(--font-title, serif) !important;
+  font-size: 1.6rem !important;
+  line-height: 1.2 !important;
+  color: #FFFFFF !important;
+  margin: 0 0 6px 0 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+}
+
+.hero-card-overlay .hero-card-sub {
+  display: block !important;
+  font-family: var(--font-body, sans-serif) !important;
+  font-size: 0.95rem !important;
+  font-weight: 300 !important;
+  color: #E2E8F0 !important;
+  line-height: 1.4 !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* ========================================================
+   CORREÇÃO ESTRUTURAL DE RESPONSIVIDADE E ALINHAMENTO (HERO)
+   ======================================================== */
+
+/* 1. Alinhamento unificado do container do Hero com o resto do site */
+.hero {
+  padding: 60px 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.hero .container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box !important;
+}
+
+/* 2. Grelha Desktop equilibrada */
+@media (min-width: 993px) {
+  .hero .hero-grid {
+    display: grid !important;
+    grid-template-columns: 1.15fr 0.85fr !important;
+    gap: 48px !important;
+    align-items: center !important;
+  }
+}
+
+/* 3. Comportamento Móvel (Mobile & Tablet): Empilhar em coluna única */
+@media (max-width: 992px) {
+  .hero {
+    padding: 40px 0 !important;
+  }
+
+  .hero .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+    width: 100% !important;
+  }
+
+  .hero .hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+  }
+
+  .hero .hero-content h1,
+  .hero .hero-content .hero-title {
+    font-size: 2.1rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Card passa a ter largura completa e proporção paisagem correta */
+  .hero .hero-visual-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 320px !important;
+    min-height: 320px !important;
+  }
+
+  /* Esconde o CTA redundante no header móvel para não sufocar o logotipo */
+  .site-header .header-cta-solid {
+    display: none !important;
+  }
+}
+
+/* 4. Correção da pílula (Tag) para nunca quebrar ou deformar */
+.hero-card-tag {
+  white-space: nowrap !important;
+  width: fit-content !important;
+  display: inline-block !important;
+  border-radius: 9999px !important;
+  padding: 6px 14px !important;
+  font-size: 0.72rem !important;
+}
+
+/* ========================================================
+   REFINAMENTO DEFINITIVO: HERO ALINHADO, RESPONSIVO E ENXUTO
+   ======================================================== */
+
+/* 1. Header institucional e limpo */
+.site-header .header-content {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  min-height: 70px !important;
+}
+
+.site-header .desktop-nav {
+  margin-left: auto !important;
+  gap: 32px !important;
+}
+
+/* 2. Container da Hero cravado nas mesmas margens das seções abaixo */
+.hero {
+  padding: 70px 0 !important;
+  width: 100% !important;
+  background-color: #2D2D2D !important;
+  box-sizing: border-box !important;
+}
+
+.hero > .container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box !important;
+}
+
+/* 3. Grid no Desktop */
+@media (min-width: 993px) {
+  .hero .hero-grid {
+    display: grid !important;
+    grid-template-columns: 1.2fr 0.8fr !important;
+    gap: 56px !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .hero .hero-content {
+    text-align: left !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .hero .hero-visual-card {
+    height: 400px !important;
+    min-height: 400px !important;
+  }
+}
+
+/* 4. Grid no Mobile/Tablet: Coluna única limpa */
+@media (max-width: 992px) {
+  .hero {
+    padding: 40px 0 !important;
+  }
+
+  .hero .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 36px !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .hero .hero-content {
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  .hero .hero-visual-card {
+    width: 100% !important;
+    height: 320px !important;
+    min-height: 320px !important;
+  }
+}
+
+/* 5. Tag do Card blindada contra quebra esquisita */
+.hero-card-tag {
+  white-space: nowrap !important;
+  width: fit-content !important;
+  display: inline-block !important;
+  border-radius: 9999px !important;
+  padding: 5px 14px !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 12px !important;
+}
+
+/* ========================================================
+   ALINHAMENTO DEFINITIVO: HERO EM EIXO RIGOROSO COM .CONTAINER
+   ======================================================== */
+
+/* 1. Remove qualquer margem assimétrica na seção Hero */
+section.hero {
+  padding: 60px 0 80px 0 !important;
+  background-color: #2D2D2D !important;
+  width: 100% !important;
+  display: block !important;
+  box-sizing: border-box !important;
+}
+
+/* 2. Garante que o container da Hero tenha EXATAMENTE a mesma largura das seções de baixo */
+section.hero > .container,
+section.hero .hero-grid {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* 3. Grid Desktop: Distribuição perfeita das 2 colunas */
+@media (min-width: 993px) {
+  section.hero .hero-grid {
+    display: grid !important;
+    grid-template-columns: 1.15fr 0.85fr !important;
+    gap: 48px !important;
+    align-items: center !important;
+    padding: 0 1.5rem !important; /* Respeita o padding natural do container */
+  }
+
+  section.hero .hero-content {
+    text-align: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  section.hero .hero-content h1,
+  section.hero .hero-content .hero-title {
+    font-size: clamp(2.3rem, 3.5vw, 3.2rem) !important;
+    line-height: 1.18 !important;
+    margin-bottom: 20px !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  section.hero .hero-visual-card {
+    height: 420px !important;
+    min-height: 420px !important;
+    width: 100% !important;
+    max-width: 480px !important;
+    margin-left: auto !important; /* Empurra o card para a direita do grid */
+    margin-right: 0 !important;
+  }
+}
+
+/* 4. Grid Mobile: Empilhamento vertical em 1 coluna */
+@media (max-width: 992px) {
+  section.hero {
+    padding: 40px 0 50px 0 !important;
+  }
+
+  section.hero .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+    padding: 0 1.5rem !important;
+  }
+
+  section.hero .hero-content {
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  section.hero .hero-visual-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 320px !important;
+    min-height: 320px !important;
+    margin: 0 !important;
+  }
+}
