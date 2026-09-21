@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="110" fill="#2D2D2D"/>
+  <!-- Letra "i" estilizada com serifa sofisticada da IMPEL -->
+  <!-- Ponto do "i" -->
+  <circle cx="256" cy="140" r="38" fill="#D6AB78"/>
+  <!-- Haste do "i" com serifa superior e base estendida -->
+  <path d="M 224 215 L 288 215 L 288 365 L 315 365 L 315 395 L 197 395 L 197 365 L 224 365 Z" fill="#D6AB78"/>
+</svg>
