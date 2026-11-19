@@ -15,12 +15,18 @@ function initContactForm() {
       return;
     }
 
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "lead_contato",
+      form_name: "contactForm",
+      lead_channel: "whatsapp"
+    });
+
     const fullMessage = `*Novo Contato via Site - IMPEL*\n\n*Nome:* ${name}\n*Telefone:* ${phone}\n*E-mail:* ${email}\n*Mensagem:* ${msg}`;
     const encoded = encodeURIComponent(fullMessage);
     const targetPhone = typeof SITE_SETTINGS !== "undefined" && SITE_SETTINGS.whatsappNumber ? SITE_SETTINGS.whatsappNumber : "5583998586796";
     const waUrl = `https://wa.me/${targetPhone}?text=${encoded}`;
 
-    // Tenta abrir em nova aba; se o navegador barrar popup, redireciona diretamente na mesma janela
     const newTab = window.open(waUrl, "_blank");
     if (!newTab || newTab.closed || typeof newTab.closed === "undefined") {
       window.location.href = waUrl;
