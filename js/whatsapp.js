@@ -18,10 +18,13 @@ function openWhatsapp(message) {
 }
 
 document.addEventListener("click", (e) => {
-  const trigger = e.target.closest("[data-whatsapp]");
+  const trigger = e.target.closest('[data-whatsapp], a[href*="wa.me"], a[href*="whatsapp.com"]');
   if (!trigger) return;
 
-  e.preventDefault();
-  const customMessage = trigger.getAttribute("data-message");
-  openWhatsapp(customMessage || undefined);
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "click_whatsapp",
+    lead_channel: "whatsapp",
+    link_url: trigger.getAttribute("href") || ""
+  });
 });
