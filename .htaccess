@@ -1,10 +1,16 @@
-# Bloqueia acesso a arquivos ocultos (.git, .env, .htaccess, etc.)
-<FilesMatch "^\.">
-    Require all denied
-</FilesMatch>
-
 # Desativa listagem de diretórios
 Options -Indexes
+
+# Bloqueia explicitamente apenas arquivos sensíveis conhecidos (sem quebrar .htaccess ou diretórios base)
+<FilesMatch "^(\.git|\.gitignore|\.env|\.htpasswd|composer\.(json|lock)|package(-lock)?\.json)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
 
 # Headers de segurança HTTP
 <IfModule mod_headers.c>
