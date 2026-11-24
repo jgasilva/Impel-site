@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://impel-site.pages.dev/sitemap.xml
+Sitemap: https://impelplanejados.com.br/sitemap.xml
